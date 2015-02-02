@@ -1,0 +1,13 @@
+(defrule set-the-controller-to-welcome-controller-if-no-controller-found
+	?c <- (controller "")
+	=>
+	(retract ?c)
+	(assert (controller "demo"))
+)
+
+(defrule if-the-controller-is-demo-then-use-test-controller
+	?c <- (controller "demo")
+	=>
+	(retract ?c)
+	(assert (controller "test"))
+)
