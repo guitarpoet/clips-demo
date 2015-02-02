@@ -1,0 +1,27 @@
+{
+    "name": "jack/clips_demo",
+    "description": "The demo for clips tool",
+    "authors": [
+        {
+            "name": "Jack",
+            "email": "guitarpoet@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+	"repositories": [
+		{
+			"type": "git",
+			"url": "https://github.com/guitarpoet/clips-tool.git"
+		}
+    ],
+	"autoload": {
+		"psr-4": {
+			"Demo\\": "application/"
+		}
+	},
+	"require": {
+		"php": ">=5.3.0",
+        "smarty/smarty": "3.1.21",
+        "guitarpoet/clips-tool": "*"
+	}
+}

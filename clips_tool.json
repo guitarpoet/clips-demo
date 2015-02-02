@@ -1,0 +1,26 @@
+{
+	"table_prefix":"demo_",
+	"models": {
+		"clips_demo": {
+			"datasource": "mysql"
+		}
+	},
+	"logger": {
+		"handlers": {
+			"Stream" : ["php://stdin", "debug"],
+			"FirePHP" : ["debug"],
+			"ChromePHP": ["debug"], 
+			"RotatingFile": ["/tmp/clips_demo.log", 4, "debug"]
+		},
+		"processors": ["Git", "PsrLogMessage", "Introspection", "Tag"]
+	},
+	"sass_plugins": ["Sass\\AutoConstruct"],
+	"datasources": {
+		"mysql": {
+			"table_prefix":"",
+			"context": "user",
+			"type": "mysqli",
+			"database": "mysql"
+		}
+	}
+}
