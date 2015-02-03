@@ -7,6 +7,7 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
+	 * @Clips\Widget({"Html"})
 	 * @Clips\Scss({"test"})
 	 */
 	public function index() {
@@ -31,6 +32,12 @@ class TestController extends Controller {
 	public function url() {
 		$router = $this->tool->context('router');
 		echo \base_url('test');
+	}
+
+	/**
+	 * @Clips\Widget({"Html"})
+	 */
+	public function widget() {
 	}
 
 	/** @Clips\Rules("sample") */
