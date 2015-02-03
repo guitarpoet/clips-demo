@@ -1,0 +1,5 @@
+(defrule hello-world
+	(hello ?h)
+	=>
+	(dump ?h)
+)
