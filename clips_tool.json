@@ -2,6 +2,10 @@
 	"table_prefix":"demo_",
 	"namespace": "Demo\\",
 	"route_rules": ["/application/rules/route.rules", "/rules/route.rules"],
+	"filters": ["Rules", "SmartyView", "MustacheView"],
+	"default_view": "Smarty",
+	"rules_dir": "application/rules",
+	"template_dir":["application/views"],
 	"models": {
 		"clips_demo": {
 			"datasource": "mysql"
