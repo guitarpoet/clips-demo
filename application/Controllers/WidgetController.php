@@ -4,6 +4,7 @@ use Clips\Controller;
 use Clips\Resource;
 
 class WidgetController extends Controller {
+
 	/**
 	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
 	 * @Clips\Widget({"Html", "Demo"})
@@ -12,5 +13,12 @@ class WidgetController extends Controller {
 	public function index() {
 		$data = array("world" => "Jack");
 		return $this->render("tests/index", $data, $engine);
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "Jquery"})
+	 */
+	public function bootstrap() {
+
 	}
 }
