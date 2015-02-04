@@ -7,7 +7,7 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
-	 * @Clips\Widget({"Html"})
+	 * @Clips\Widget({"Html", "Demo"})
 	 * @Clips\Scss({"test"})
 	 */
 	public function index() {
@@ -38,6 +38,7 @@ class TestController extends Controller {
 	 * @Clips\Widget({"Html"})
 	 */
 	public function widget() {
+		return $this->render("welcome");
 	}
 
 	/** @Clips\Rules("sample") */
