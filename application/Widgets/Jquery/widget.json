@@ -4,4 +4,7 @@
 	"version": "1.0",
 	"name": "demo.jquery",
 	"doc":"Jquery widget",
+	"js": {
+		"files": ["jquery.min.js"]
+	}
 }

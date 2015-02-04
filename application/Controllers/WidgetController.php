@@ -16,9 +16,10 @@ class WidgetController extends Controller {
 	}
 
 	/**
+	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
 	 * @Clips\Widget({"Html", "Jquery"})
 	 */
 	public function bootstrap() {
-
+		return $this->render("tests/bootstrap", array(), $engine);
 	}
 }
