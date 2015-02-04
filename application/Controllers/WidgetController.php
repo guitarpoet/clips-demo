@@ -6,20 +6,33 @@ use Clips\Resource;
 class WidgetController extends Controller {
 
 	/**
-	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
-	 * @Clips\Widget({"Html", "Demo"})
-	 * @Clips\Scss({"test"})
+	 * @Clips\Widget({"Html"})
 	 */
-	public function index() {
-		$data = array("world" => "Jack");
-		return $this->render("tests/index", $data, $engine);
+	public function __construct() {
+		parent::__construct();
 	}
 
 	/**
 	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
-	 * @Clips\Widget({"Html", "Jquery"})
+	 * @Clips\Widget({"Demo"})
+	 * @Clips\Scss({"test"})
+	 */
+	public function index() {
+		$data = array("world" => "Jack");
+		return $this->render("tests/index", $data);
+	}
+
+	/**
+	 * @Clips\Widget({"Bootstrap"})
 	 */
 	public function bootstrap() {
-		return $this->render("tests/bootstrap", array(), $engine);
+		return $this->render("tests/bootstrap", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Image"})
+	 */
+	public function bootstrapcommon() {
+		return $this->render("tests/bootstrapcommon", array());
 	}
 }

@@ -1,0 +1,11 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Wed Feb  4 15:42:10 2015",
+	"version": "1.0",
+	"name": "demo.BootstrapCommon",
+	"doc":"BootstrapCommon widget",
+	"depends": ["Jquery"],
+	"scss": {
+		"files": ["_normalize"]
+	}
+}

@@ -5,6 +5,6 @@
 	"name": "demo.jquery",
 	"doc":"Jquery widget",
 	"js": {
-		"files": ["jquery.min.js"]
+		"files": ["jquery.min"]
 	}
 }
