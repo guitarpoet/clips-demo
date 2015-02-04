@@ -22,7 +22,8 @@ class TestController extends Controller {
 	}
 
 	/**
-	 * @Clips\Form({"user/edit", "group/edit"})
+	 * @Clips\Widget({"Form"})
+	 * @Clips\Form({"test"})
 	 */
 	public function form() {
 		return $this->render("form_sample");
