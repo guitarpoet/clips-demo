@@ -1,0 +1,11 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 16:15:58 2015",
+	"version": "1.0",
+	"name": "demo.nav",
+	"doc":"Nav widget",
+	"depends": ["BootstrapNav"],
+	"scss": {
+		"files": ["pinet_nav"]
+	}
+}

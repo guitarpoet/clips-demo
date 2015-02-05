@@ -1,0 +1,11 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 16:05:31 2015",
+	"version": "1.0",
+	"name": "bootstrap nav",
+	"doc":"Bootstrap Nav widget",
+	"depends": ["BootstrapCommon"],
+	"scss": {
+		"files": ["mixins/_nav-divider", "mixins/_nav-vertical-align", "_navs"]
+	}
+}

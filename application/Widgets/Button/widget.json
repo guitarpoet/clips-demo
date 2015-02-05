@@ -1,0 +1,11 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 17:24:19 2015",
+	"version": "1.0",
+	"name": "demo.button",
+	"doc":"Button widget",
+	"depends": ["BootstrapButton", "BootstrapDropdown"],
+	"scss": {
+		"files": ["pinet_button_mixin", "pinet_button", "pinet_checkgroup", "pinet_switchbox"]
+	}
+}

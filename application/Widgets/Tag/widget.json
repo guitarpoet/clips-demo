@@ -1,0 +1,8 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 16:39:13 2015",
+	"version": "1.0",
+	"name": "demo.tag",
+	"doc":"Tag widget",
+	"depends": ["BootstrapLabel"]
+}

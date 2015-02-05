@@ -1,0 +1,8 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 15:25:17 2015",
+	"version": "1.0",
+	"name": "demo.icon",
+	"doc":"Icon widget",
+	"depends": ["BootstrapIcon"]
+}

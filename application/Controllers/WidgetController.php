@@ -78,4 +78,32 @@ class WidgetController extends Controller {
 	public function responsive() {
 		return $this->render("tests/responsive", array());
 	}
+
+	/**
+	 * @Clips\Widget({"Html", "Icon"})
+	 */
+	public function icon() {
+		return $this->render("tests/icon", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "Nav"})
+	 */
+	public function nav() {
+		return $this->render("tests/nav", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "Tag"})
+	 */
+	public function tag() {
+		return $this->render("tests/tag", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "Button"})
+	 */
+	public function button() {
+		return $this->render("tests/button", array());
+	}
 }

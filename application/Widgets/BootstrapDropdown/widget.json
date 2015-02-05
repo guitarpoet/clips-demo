@@ -1,0 +1,14 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 17:16:39 2015",
+	"version": "1.0",
+	"name": "bootstrap drowdown",
+	"doc":"Bootstrap Drowdown widget",
+	"depends": ["BootstrapButton", "BootstrapNav"],
+	"js": {
+		"files": ["dropdown"]
+	},
+	"scss": {
+		"files": ["_dropdowns"]
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 16:58:21 2015",
+	"version": "1.0",
+	"name": "bootstrap button",
+	"doc":"Bootstrap Button widget",
+	"depends": ["BootstrapCommon", "Image"],
+	"js": {
+		"files": ["button"]
+	},
+	"scss": {
+		"files": ["mixins/_buttons", "_buttons", "_button-groups"]
+	}
+}
