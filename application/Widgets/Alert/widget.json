@@ -1,0 +1,12 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 10:06:03 2015",
+	"version": "1.0",
+	"name": "demo.alert",
+	"doc":"Alert widget",
+	"depends": ["Jquery"],
+	"scss": {
+		"depends": ["_bootstrap"]
+	},
+	"files": [""]
+}

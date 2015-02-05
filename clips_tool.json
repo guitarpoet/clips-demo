@@ -3,7 +3,7 @@
 	"namespace": "Demo\\",
 	"route_rules": ["/application/rules/route.rules", "/rules/route.rules"],
 	"filters": ["Rules", "Js", "Scss", "Css", "SmartyView", "MustacheView", "JsonView"],
-	"helpers":["web"],
+	"helpers":["web","html"],
 	"default_view": "Smarty",
 	"rules_dir": "application/rules",
 	"sass_folders": "application/static/scss",
@@ -18,7 +18,7 @@
 		"handlers": {
 			"Stream" : ["php://stdin", "debug"],
 			"FirePHP" : ["debug"],
-			"ChromePHP": ["debug"], 
+			"ChromePHP": ["debug"],
 			"RotatingFile": ["/tmp/clips_demo.log", 4, "debug"]
 		},
 		"processors": ["Git", "PsrLogMessage", "Introspection", "Tag"]

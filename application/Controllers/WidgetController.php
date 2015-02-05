@@ -6,13 +6,6 @@ use Clips\Resource;
 class WidgetController extends Controller {
 
 	/**
-	 * @Clips\Widget({"Html"})
-	 */
-	public function __construct() {
-		parent::__construct();
-	}
-
-	/**
 	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
 	 * @Clips\Widget({"Demo"})
 	 * @Clips\Scss({"test"})
@@ -23,16 +16,31 @@ class WidgetController extends Controller {
 	}
 
 	/**
-	 * @Clips\Widget({"Bootstrap"})
+	 * @Clips\Widget({"html", "Bootstrap"})
 	 */
 	public function bootstrap() {
 		return $this->render("tests/bootstrap", array());
 	}
 
 	/**
-	 * @Clips\Widget({"Image"})
+	 * @Clips\Widget({"html", "Image"})
 	 */
 	public function bootstrapcommon() {
 		return $this->render("tests/bootstrapcommon", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "Action"})
+	 */
+	public function action() {
+		return $this->render("tests/action", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "BootstrapAlert"})
+	 */
+	public function alert() {
+		// var_dump(clips_context('scss'));
+		return $this->render("tests/alert", array());
 	}
 }
