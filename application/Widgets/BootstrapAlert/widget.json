@@ -4,7 +4,8 @@
 	"version": "1.0",
 	"name": "bootstrap alert widget",
 	"doc":"Bootstrap Alert widget",
+	"depends": ["BootstrapCommon"],
 	"scss": {
-		"files": ["mixins/_alert","_alert"]
+		"files": ["mixins/_alerts","_alerts"]
 	}
 }

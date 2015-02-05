@@ -4,9 +4,11 @@
 	"version": "1.0",
 	"name": "demo.alert",
 	"doc":"Alert widget",
-	"depends": ["Jquery"],
-	"scss": {
-		"depends": ["_bootstrap"]
+	"depends": ["Jquery", "BootstrapAlert", "Common"],
+	"js": {
+		"files" : ["pinet_alert","pinet_alert_init"]
 	},
-	"files": [""]
+	"scss": {
+		"files": ["pinet_alert_mixins", "pinet_alert"]
+	}
 }

@@ -37,10 +37,17 @@ class WidgetController extends Controller {
 	}
 
 	/**
-	 * @Clips\Widget({"Html", "BootstrapAlert"})
+	 * @Clips\Widget({"Html", "Alert"})
 	 */
 	public function alert() {
 		// var_dump(clips_context('scss'));
 		return $this->render("tests/alert", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "Banner"})
+	 */
+	public function banner() {
+		return $this->render("tests/banner", array());
 	}
 }

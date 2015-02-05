@@ -6,6 +6,6 @@
 	"doc":"BootstrapCommon widget",
 	"depends": ["Jquery"],
 	"scss": {
-		"files": ["_normalize"]
+		"files": ["_normalize","_variables"]
 	}
 }
