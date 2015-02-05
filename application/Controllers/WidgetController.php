@@ -50,4 +50,11 @@ class WidgetController extends Controller {
 	public function banner() {
 		return $this->render("tests/banner", array());
 	}
+
+	/**
+	 * @Clips\Widget({"Html", "Breadcrumb"})
+	 */
+	public function breadcrumb() {
+		return $this->render("tests/breadcrumb", array());
+	}
 }
