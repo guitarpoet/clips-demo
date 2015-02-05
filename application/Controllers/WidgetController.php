@@ -57,4 +57,25 @@ class WidgetController extends Controller {
 	public function breadcrumb() {
 		return $this->render("tests/breadcrumb", array());
 	}
+
+	/**
+	 * @Clips\Widget({"Html", "Videojs"})
+	 */
+	public function videoad() {
+		return $this->render("tests/videoad", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "Jplayer"})
+	 */
+	public function jplayer() {
+		return $this->render("tests/jplayer", array());
+	}
+
+	/**
+	 * @Clips\Widget({"Html", "Responsive"})
+	 */
+	public function responsive() {
+		return $this->render("tests/responsive", array());
+	}
 }
