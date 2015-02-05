@@ -7,7 +7,7 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
-	 * @Clips\Widget({"Html", "Demo"})
+	 * @Clips\Widget({"Form", "Demo"})
 	 * @Clips\Scss({"test"})
 	 */
 	public function index() {
@@ -19,6 +19,14 @@ class TestController extends Controller {
 			return $this->render("welcome_mustache", $data, 'mustache');
 		}
 		return $this->render("welcome", $data, $engine);
+	}
+
+	/**
+	 * @Clips\Widget({"Form"})
+	 * @Clips\Form({"test"})
+	 */
+	public function form() {
+		return $this->render("form_sample");
 	}
 
 	public function redi() {
