@@ -7,7 +7,7 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
-	 * @Clips\Widget({"Form", "Demo"})
+	 * @Clips\Widget({"Form", "Jquery", "Demo"})
 	 * @Clips\Scss({"test"})
 	 */
 	public function index() {
@@ -22,10 +22,18 @@ class TestController extends Controller {
 	}
 
 	/**
-	 * @Clips\Widget({"Form"})
+	 * @Clips\Form({"test"})
+	 */
+	public function form_form() {
+	}
+
+	/**
+	 * @Clips\Widget({"Form", "Jquery"})
 	 * @Clips\Form({"test"})
 	 */
 	public function form() {
+		clips_context('jquery_init', 'alert(1);', true);
+		clips_context('jquery_init', 'console.info(1);', true);
 		return $this->render("form_sample");
 	}
 

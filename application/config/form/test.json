@@ -3,12 +3,25 @@
                 "field": "id",
 				"state": "readonly",
                 "label": "ID",
-                "rules": ["required"]
+                "rules": {
+					"type":"number",
+					"required": "true"
+				},
+				"messages": {
+					"required": "This field must be set"
+				}
         },
         {
                 "field": "status",
                 "label": "Status",
-                "rules": ["required"]
+				"defaultValue":"hello",
+                "rules": [
+					{"type":"number"},
+					"required"
+				],
+				"messages": {
+					"required": "This field must be set"
+				}
         },
         {
                 "field": "create_date",
