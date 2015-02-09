@@ -22,10 +22,11 @@ class TestController extends Controller {
 	}
 
 	/**
-	 * @Clips\Widget({"Form"})
+	 * @Clips\Widget({"Bootstrap","Form"})
 	 * @Clips\Form({"test"})
 	 */
 	public function form() {
+		$this->meta('hello', 'world');
 		return $this->render("form_sample");
 	}
 
