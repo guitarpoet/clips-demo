@@ -113,4 +113,11 @@ class WidgetController extends Controller {
 	public function link() {
 		return $this->render("tests/link", array());
 	}
+
+	/**
+	 * @Clips\Widget({"Html", "BootstrapGrid"})
+	 */
+	public function grid() {
+		return $this->render("tests/grid", array());
+	}
 }
