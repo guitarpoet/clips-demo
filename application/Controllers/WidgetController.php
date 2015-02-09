@@ -106,4 +106,11 @@ class WidgetController extends Controller {
 	public function button() {
 		return $this->render("tests/button", array());
 	}
+
+	/**
+	 * @Clips\Widget({"Html", "Link"})
+	 */
+	public function link() {
+		return $this->render("tests/link", array());
+	}
 }
