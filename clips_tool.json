@@ -18,7 +18,7 @@
 		"handlers": {
 			"Stream" : ["php://stdin", "debug"],
 			"FirePHP" : ["debug"],
-			"ChromePHP": ["debug"], 
+			"ChromePHP": ["debug"],
 			"RotatingFile": ["/tmp/clips_demo.log", 4, "debug"]
 		},
 		"processors": ["Git", "PsrLogMessage", "Introspection", "Tag"]
