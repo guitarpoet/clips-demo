@@ -3,6 +3,9 @@
 use Clips\Controller;
 use Clips\Resource;
 
+/**
+ * @Clips\Widget({"html"})
+ */
 class WidgetController extends Controller {
 
 	/**
