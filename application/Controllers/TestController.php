@@ -28,6 +28,7 @@ class TestController extends Controller {
 	 * @Clips\Form({"test"})
 	 */
 	public function form_form() {
+		var_dump($this->request->param());
 	}
 
 	/**

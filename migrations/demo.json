@@ -1,0 +1,23 @@
+{
+	"groups": {
+		"name": {
+			"type": "string",
+			"key": true,
+			"options": {
+				"limit": 20
+			}
+		}
+	},
+	"users": {
+		"username": {
+			"type": "string",
+			"key": true,
+			"options": {
+				"limit": 20
+			}
+		},
+		"group_id": {
+			"foreign_key": "groups"
+		}
+	}
+}
