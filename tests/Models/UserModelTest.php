@@ -2,12 +2,11 @@
 
 class UserModelTest extends Clips\TestCase {
 	public function doSetUp() {
-		$this->model = $this->tool->model('User');
+		$this->model = $this->tool->model('user');
 	}
 
 	public function testGetUserModel() {
 		$this->assertNotNull($this->model);
 		$this->assertEquals($this->model->table, 'users');
 	}
-
 }

@@ -10,6 +10,7 @@
 	"sass_plugins": ["Sass\\AutoConstruct"],
 	"cache_dir": "application/cache",
 	"template_dir":["application/views"],
+	"test_data_dir": "tests/data",
 	"models": {
 		"clips_demo": {
 			"datasource": "mysql"

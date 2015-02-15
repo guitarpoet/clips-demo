@@ -2,10 +2,10 @@
 
 class GroupModelTest extends Clips\TestCase {
 	public function doSetUp() {
-		$this->model = $this->tool->model('Group');
+		$this->model = $this->tool->model('group');
 	}
 
-	public function testGetUserModel() {
+	public function testGetModel() {
 		$this->assertNotNull($this->model);
 		$this->assertEquals($this->model->table, 'groups');
 	}
