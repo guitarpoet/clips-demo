@@ -26,6 +26,13 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Form({"test"})
+	 */
+	public function form_form() {
+	}
+
+	/**
+	 * @Clips\Widget({"Form", "Jquery"})
+	 * @Clips\Form({"test"})
 	 * @Clips\Js("application/static/js/test")
 	 * @Clips\Context(key = "jquery_init", value = "console.info('hello');")
 	 */
