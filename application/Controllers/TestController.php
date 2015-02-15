@@ -3,11 +3,14 @@
 use Clips\Controller;
 use Clips\Resource;
 
+/**
+ * @Clips\Widget({"Bootstrap", "Form"})
+ * @Clips\Meta(key = "hello", value = "world")
+ */
 class TestController extends Controller {
 
 	/**
-	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
-	 * @Clips\Widget({"Form", "Demo"})
+	 * @Clips\Widget({"Demo"})
 	 * @Clips\Scss({"test"})
 	 */
 	public function index() {
@@ -22,16 +25,23 @@ class TestController extends Controller {
 	}
 
 	/**
-	 * @Clips\Widget({"Bootstrap","Form"})
 	 * @Clips\Form({"test"})
+	 * @Clips\Js("application/static/js/test")
+	 * @Clips\Context(key = "jquery_init", value = "console.info('hello');")
 	 */
 	public function form() {
-		$this->meta('hello', 'world');
 		return $this->render("form_sample");
 	}
 
+	/**
+	 * @Clips\Form(get = true, value = "test")
+	 */
+	public function valid() {
+		echo "Fine";
+	}
+
 	public function redi() {
-		return $this->redirect(\site_url('test'));
+		return $this->redirect(\Clips\site_url('test'));
 	}
 
 	public function json() {
@@ -40,7 +50,7 @@ class TestController extends Controller {
 
 	public function url() {
 		$router = $this->tool->context('router');
-		echo \base_url('test');
+		echo \Clips\base_url('test');
 	}
 
 	/**

@@ -2,11 +2,12 @@
 	"table_prefix":"demo_",
 	"namespace": "Demo\\",
 	"route_rules": ["/application/rules/route.rules", "/rules/route.rules"],
-	"filters": ["Rules", "Form", "Js", "Scss", "Css", "SmartyView", "MustacheView", "JsonView"],
+	"filters": ["Rules", "Form", "Clips\\Widgets\\Jquery\\Init", "Js", "Scss", "Css", "SmartyView", "MustacheView", "JsonView"],
 	"helpers":["web", "html"],
 	"default_view": "Smarty",
 	"rules_dir": "application/rules",
 	"sass_folders": "application/static/scss",
+	"sass_plugins": ["Sass\\AutoConstruct"],
 	"cache_dir": "application/cache",
 	"template_dir":["application/views"],
 	"models": {
@@ -23,7 +24,6 @@
 		},
 		"processors": ["Git", "PsrLogMessage", "Introspection", "Tag"]
 	},
-	"sass_plugins": ["Sass\\AutoConstruct"],
 	"datasources": {
 		"mysql": {
 			"table_prefix":"",
