@@ -29,7 +29,7 @@
 			"table_prefix":"",
 			"context": "user",
 			"type": "mysqli",
-			"database": "mysql"
+			"database": "demo_dev"
 		}
 	}
 }

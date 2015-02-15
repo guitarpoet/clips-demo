@@ -32,7 +32,7 @@ class TestController extends Controller {
 	}
 
 	/**
-	 * @Clips\Widget({"Form", "Jquery"})
+	 * @Clips\Widget({"Form"})
 	 * @Clips\Form({"test"})
 	 * @Clips\Js("application/static/js/test")
 	 * @Clips\Context(key = "jquery_init", value = "console.info('hello');")
