@@ -1,13 +1,9 @@
 {html}
-<head>
-	<meta charset="UTF-8">
-	<title></title>
-</head>
-<body>
-<ul>
-{foreach from=$error item=item}
-	<li>{$item[0]}</li>
-{/foreach}
-</ul>
-</body>
+	{head title='Form Validation Error'}
+	{/head}
+	{body}
+		{ul items=$error}
+			{literal}{li}{$item[0]}{/li}{/literal}
+		{/ul}
+	{/body}
 {/html}

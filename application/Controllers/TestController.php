@@ -3,37 +3,38 @@
 use Clips\Controller;
 use Clips\Resource;
 
+/**
+ * @Clips\Widget({"Form", "Demo"})
+ */
 class TestController extends Controller {
 
 	/**
-	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
-	 * @Clips\Widget({"Form", "Jquery", "Demo"})
 	 * @Clips\Scss({"test"})
 	 */
 	public function index() {
 		$data = array("world" => "Jack");
 		$engine = null;
-		if(isset($_GET['mus']))
+		if($this->get('mus'))
 			$engine = 'mustache';
-		if(isset($_GET['mustache'])) {
+		if($this->get('mustache')) {
 			return $this->render("welcome_mustache", $data, 'mustache');
 		}
 		return $this->render("welcome", $data, $engine);
 	}
 
 	/**
-	 * @Clips\Form({"test"})
+	 * @Clips\HttpSession(key = "hello", value = "world")
 	 */
-	public function form_form() {
+	public function session() {
+		echo $this->request->session()->hello;
 	}
 
 	/**
-	 * @Clips\Widget({"Form", "Jquery"})
+	 * @Clips\Widget({"Bootstrap"})
 	 * @Clips\Form({"test"})
+	 * @Clips\Context(key = 'jquery_init', value = 'console.info("Hello");');
 	 */
 	public function form() {
-		clips_context('jquery_init', 'alert(1);', true);
-		clips_context('jquery_init', 'console.info(1);', true);
 		return $this->render("form_sample");
 	}
 
@@ -47,7 +48,7 @@ class TestController extends Controller {
 
 	public function url() {
 		$router = $this->tool->context('router');
-		echo \base_url('test');
+		echo \Clips\base_url('test');
 	}
 
 	/**

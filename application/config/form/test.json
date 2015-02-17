@@ -3,10 +3,10 @@
                 "field": "id",
 				"state": "readonly",
                 "label": "ID",
-                "rules": {
-					"type":"number",
-					"required": "true"
-				},
+                "rules": [
+					{"type":"number"},
+					"required"
+				],
 				"messages": {
 					"required": "This field must be set"
 				}
