@@ -1,0 +1,17 @@
+{
+	"%entity": {
+		"$storage": true
+	},
+	"admin": {
+		"$template": "%entity",
+		"$model": "group",
+		"id": 1000,
+		"name": "admin"
+	},
+	"jack": {
+		"$template": "%entity",
+		"$model": "user",
+		"username": "Jack",
+		"group_id": 1000
+	}
+}

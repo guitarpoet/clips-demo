@@ -5,8 +5,8 @@
 	{body}
 		{div class="container"}
 			{h1}Form Sample{/h1}
+			{ul items=[1,2,3]}{/ul}
 			{form name='test' class=[test, demo]}
-				{field field='id'}{/field}
 				{field field='status'}{/field}
 				{div class='action'}
 					{submit value='Post It'}

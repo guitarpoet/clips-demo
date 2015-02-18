@@ -5,6 +5,7 @@ use Clips\Resource;
 
 /**
  * @Clips\Widget({"Form", "Demo"})
+ * @Clips\Meta(key = "hello", value = "world")
  */
 class TestController extends Controller {
 
@@ -29,17 +30,28 @@ class TestController extends Controller {
 		echo $this->request->session()->hello;
 	}
 
+	public function form_form() {
+		var_dump($this->request->param());
+	}
+
 	/**
-	 * @Clips\Widget({"Bootstrap"})
 	 * @Clips\Form({"test"})
-	 * @Clips\Context(key = 'jquery_init', value = 'console.info("Hello");');
+	 * @Clips\Js("application/static/js/test")
+	 * @Clips\Context(key = "jquery_init", value = "console.info('hello');")
 	 */
 	public function form() {
 		return $this->render("form_sample");
 	}
 
+	/**
+	 * @Clips\Form(get = true, value = "test")
+	 */
+	public function valid() {
+		echo "Fine";
+	}
+
 	public function redi() {
-		return $this->redirect(\site_url('test'));
+		return $this->redirect(\Clips\site_url('test'));
 	}
 
 	public function json() {

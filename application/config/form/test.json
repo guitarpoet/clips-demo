@@ -14,11 +14,12 @@
         {
                 "field": "status",
                 "label": "Status",
+                "rules": [{
+					"type": "number",
+					"minlength": 3,
+					"maxlength": 10
+				}, "required"],
 				"defaultValue":"hello",
-                "rules": [
-					{"type":"number"},
-					"required"
-				],
 				"messages": {
 					"required": "This field must be set"
 				}
