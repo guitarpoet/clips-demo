@@ -9,18 +9,6 @@ class DemoMigration extends AbstractMigration {
 		$this->template = $this->tool->library('MigrationTool');
 		$this->config = Clips\parse_json(file_get_contents(Clips\path_join(__DIR__, 'demo.json')));
 	}
-    /**
-     * Change Method.
-     *
-     * More information on this method is available here:
-     * http://docs.phinx.org/en/latest/migrations.html#the-change-method
-     *
-     * Uncomment this method if you would like to use it.
-     *
-    public function change()
-    {
-    }
-    */
     
     /**
      * Migrate Up.
@@ -28,6 +16,7 @@ class DemoMigration extends AbstractMigration {
     public function up() {
 		$this->init();
 		$this->template->up($this, $this->config);
+		$this->template->insert($this, 'demo_groups', array(array('name' => 'admin')));
     }
 
     /**
@@ -36,5 +25,6 @@ class DemoMigration extends AbstractMigration {
     public function down() {
 		$this->init();
 		$this->template->down($this, $this->config);
+		$this->execute('delete from demo_groups');
     }
 }

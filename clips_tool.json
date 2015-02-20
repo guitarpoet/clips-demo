@@ -28,7 +28,7 @@
 	},
 	"datasources": {
 		"mysql": {
-			"table_prefix":"",
+			"table_prefix":"demo_",
 			"context": "user",
 			"type": "mysqli",
 			"database": "demo_dev"

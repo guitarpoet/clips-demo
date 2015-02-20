@@ -8,7 +8,7 @@
 					"required"
 				],
 				"messages": {
-					"required": "This field must be set"
+					"required": "The id field must be set"
 				}
         },
         {
@@ -21,7 +21,7 @@
 				}, "required"],
 				"defaultValue":"hello",
 				"messages": {
-					"required": "This field must be set"
+					"required": "The status field must be set"
 				}
         },
         {

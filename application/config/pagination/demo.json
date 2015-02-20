@@ -1,0 +1,12 @@
+{
+	"from": "users",
+	"columns": [
+		{ "data": "users.id", "title" : "User ID", "action":"user/show", "toggle": true},
+		{ "data": "users.username", "title" : "Username"},
+		{ "data": "groups.name", "title" : "Group", "refer":"groups.id", "action":"group/show"}
+	],
+	"where": {
+		"users.username": "Jack"
+	},
+	"join": ["groups", {"users.group_id": "groups.id"}]
+}

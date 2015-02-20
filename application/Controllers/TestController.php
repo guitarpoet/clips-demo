@@ -35,7 +35,7 @@ class TestController extends Controller {
 	}
 
 	/**
-	 * @Clips\Form({"test"})
+	 * @Clips\Form("test")
 	 * @Clips\Js("application/static/js/test")
 	 * @Clips\Context(key = "jquery_init", value = "console.info('hello');")
 	 */
@@ -48,6 +48,14 @@ class TestController extends Controller {
 	 */
 	public function valid() {
 		echo "Fine";
+	}
+
+	/**
+	 * @Clips\Widgets\DataTable("demo")
+	 * @Clips\Widget("DataTable")
+	 */
+	public function datatable() {
+		return $this->render('datatable');
 	}
 
 	public function redi() {
@@ -68,6 +76,13 @@ class TestController extends Controller {
 	 */
 	public function widget() {
 		return $this->render("welcome");
+	}
+
+	/**
+	 * @Clips\Object("Engine")
+	 */
+	public function engine() {
+		var_dump($this->engine);
 	}
 
 	/** @Clips\Rules("sample") */
