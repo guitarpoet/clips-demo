@@ -6,6 +6,7 @@
 	"helpers":["web", "html"],
 	"default_view": "Smarty",
 	"rules_dir": "application/rules",
+	"debug_sass": true,
 	"sass_folders": "application/static/scss",
 	"sass_plugins": ["Sass\\AutoConstruct"],
 	"cache_dir": "application/cache",

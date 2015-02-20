@@ -4,7 +4,7 @@ use Clips\Controller;
 use Clips\Resource;
 
 /**
- * @Clips\Widget({"Form", "Demo"})
+ * @Clips\Widget({"Demo", "html"})
  * @Clips\Meta(key = "hello", value = "world")
  */
 class TestController extends Controller {
@@ -30,6 +30,9 @@ class TestController extends Controller {
 		echo $this->request->session()->hello;
 	}
 
+	/**
+	 * @Clips\Form("test")
+	 */
 	public function form_form() {
 		var_dump($this->request->param());
 	}
@@ -52,7 +55,6 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Widgets\DataTable("demo")
-	 * @Clips\Widget("DataTable")
 	 */
 	public function datatable() {
 		return $this->render('datatable');
