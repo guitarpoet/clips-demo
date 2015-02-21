@@ -23,6 +23,10 @@ class TestController extends Controller {
 		return $this->render("welcome", $data, $engine);
 	}
 
+	public function exc() {
+		throw new \Exception('We got an problem!');
+	}
+
 	/**
 	 * @Clips\HttpSession(key = "hello", value = "world")
 	 */
