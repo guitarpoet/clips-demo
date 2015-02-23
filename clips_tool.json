@@ -5,16 +5,8 @@
 	"filters": ["Rules", "Form", "Clips\\Widgets\\Jquery\\Init", "Js", "Scss", "Css", "SmartyView", "MustacheView", "JsonView", "DirectView"],
 	"helpers":["web", "html"],
 	"default_view": "Smarty",
-	"rules_dir": "application/rules",
 	"debug_sass": true,
-	"image_dir": ["application/static/img"],
-	"bundle_dir": ["application/messages"],
-	"sass_folders": "application/static/scss",
 	"sass_plugins": ["Sass\\AutoConstruct"],
-	"cache_dir": "application/cache",
-	"template_dir":["application/views"],
-	"widget_dir": "application/Widgets",
-	"test_data_dir": "tests/data",
 	"models": {
 		"clips_demo": {
 			"datasource": "mysql"
