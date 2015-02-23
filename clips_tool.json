@@ -8,6 +8,7 @@
 	"rules_dir": "application/rules",
 	"debug_sass": true,
 	"image_dir": ["application/static/img"],
+	"bundle_dir": ["application/messages"],
 	"sass_folders": "application/static/scss",
 	"sass_plugins": ["Sass\\AutoConstruct"],
 	"cache_dir": "application/cache",

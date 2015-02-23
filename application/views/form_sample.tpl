@@ -4,7 +4,7 @@
 	{/head}
 	{body}
 		{div class="container"}
-			{h1}Form Sample{/h1}
+			{h1}{lang format="form"}Example{/lang}{/h1}
 			{ul items=[1,2,3]}{/ul}
 			{form name='test' class=[test, demo]}
 				{field field='status'}{/field}
