@@ -4,7 +4,7 @@ use Clips\Controller;
 use Clips\Resource;
 
 /**
- * @Clips\Widget({"Demo", "html", "lang"})
+ * @Clips\Widget({"demo", "html", "lang"})
  * @Clips\Meta(key = "hello", value = "world")
  */
 class TestController extends Controller {
@@ -68,8 +68,8 @@ class TestController extends Controller {
 		return $this->redirect(\Clips\site_url('test'));
 	}
 
-	public function json() {
-		return $this->render("", array('hello' => 'world'), 'json');
+	public function json_test() {
+		return $this->json(array('hello' => 'world'));
 	}
 
 	public function url() {
