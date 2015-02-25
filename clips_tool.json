@@ -1,12 +1,14 @@
 {
 	"table_prefix":"demo_",
+    "resolutions": [480, 640, 720, 1280, 1440, 1280, 2880],
 	"namespace": "Demo\\",
+    "template_dir": "application/templates",
 	"route_rules": ["/application/rules/route.rules", "/rules/route.rules"],
 	"filters": ["Rules", "Form", "Clips\\Widgets\\Jquery\\Init", "Js", "Scss", "Css", "SmartyView", "MustacheView", "JsonView", "DirectView"],
 	"helpers":["web", "html"],
 	"default_view": "Smarty",
 	"debug_sass": true,
-	"sass_plugins": ["Sass\\AutoConstruct"],
+    "sass_plugins": ["Sass\\AutoConstruct", "Sass\\AutoResolution"],
 	"models": {
 		"clips_demo": {
 			"datasource": "mysql"
