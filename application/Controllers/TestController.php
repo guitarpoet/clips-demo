@@ -3,44 +3,78 @@
 use Clips\Controller;
 use Clips\Resource;
 
+/**
+ * @Clips\Widget({"demo", "html", "lang"})
+ * @Clips\Meta(key = "hello", value = "world")
+ */
 class TestController extends Controller {
 
 	/**
-	 * @Clips\Js({"https://code.jquery.com/jquery-2.1.3.js"})
-	 * @Clips\Widget({"Form", "Demo"})
 	 * @Clips\Scss({"test"})
 	 */
 	public function index() {
 		$data = array("world" => "Jack");
 		$engine = null;
-		if(isset($_GET['mus']))
+		if($this->get('mus'))
 			$engine = 'mustache';
-		if(isset($_GET['mustache'])) {
+		if($this->get('mustache')) {
 			return $this->render("welcome_mustache", $data, 'mustache');
 		}
 		return $this->render("welcome", $data, $engine);
 	}
 
+	public function exc() {
+		throw new \Exception('We got an problem!');
+	}
+
 	/**
-	 * @Clips\Widget({"Bootstrap","Form"})
-	 * @Clips\Form({"test"})
+	 * @Clips\HttpSession(key = "hello", value = "world")
+	 */
+	public function session() {
+		echo $this->request->session()->hello;
+	}
+
+	/**
+	 * @Clips\Form("test")
+	 */
+	public function form_form() {
+		var_dump($this->request->param());
+	}
+
+	/**
+	 * @Clips\Form("test")
+	 * @Clips\Js("application/static/js/test")
+	 * @Clips\Context(key = "jquery_init", value = "console.info('hello');")
 	 */
 	public function form() {
-		$this->meta('hello', 'world');
 		return $this->render("form_sample");
 	}
 
-	public function redi() {
-		return $this->redirect(\site_url('test'));
+	/**
+	 * @Clips\Form(get = true, value = "test")
+	 */
+	public function valid() {
+		echo "Fine";
 	}
 
-	public function json() {
-		return $this->render("", array('hello' => 'world'), 'json');
+	/**
+	 * @Clips\Widgets\DataTable("demo")
+	 */
+	public function datatable() {
+		return $this->render('datatable');
+	}
+
+	public function redi() {
+		return $this->redirect(\Clips\site_url('test'));
+	}
+
+	public function json_test() {
+		return $this->json(array('hello' => 'world'));
 	}
 
 	public function url() {
 		$router = $this->tool->context('router');
-		echo \base_url('test');
+		echo \Clips\base_url('test');
 	}
 
 	/**
@@ -48,6 +82,13 @@ class TestController extends Controller {
 	 */
 	public function widget() {
 		return $this->render("welcome");
+	}
+
+	/**
+	 * @Clips\Object("Engine")
+	 */
+	public function engine() {
+		var_dump($this->engine);
 	}
 
 	/** @Clips\Rules("sample") */

@@ -2,13 +2,11 @@
 	"table_prefix":"demo_",
 	"namespace": "Demo\\",
 	"route_rules": ["/application/rules/route.rules", "/rules/route.rules"],
-	"filters": ["Rules", "Form", "Js", "Scss", "Css", "SmartyView", "MustacheView", "JsonView"],
+	"filters": ["Rules", "Form", "Clips\\Widgets\\Jquery\\Init", "Js", "Scss", "Css", "SmartyView", "MustacheView", "JsonView", "DirectView"],
 	"helpers":["web", "html"],
 	"default_view": "Smarty",
-	"rules_dir": "application/rules",
-	"sass_folders": "application/static/scss",
-	"cache_dir": "application/cache",
-	"template_dir":["application/views"],
+	"debug_sass": true,
+	"sass_plugins": ["Sass\\AutoConstruct"],
 	"models": {
 		"clips_demo": {
 			"datasource": "mysql"
@@ -23,13 +21,12 @@
 		},
 		"processors": ["Git", "PsrLogMessage", "Introspection", "Tag"]
 	},
-	"sass_plugins": ["Sass\\AutoConstruct"],
 	"datasources": {
 		"mysql": {
-			"table_prefix":"",
+			"table_prefix":"demo_",
 			"context": "user",
 			"type": "mysqli",
-			"database": "mysql"
+			"database": "demo_dev"
 		}
 	}
 }
