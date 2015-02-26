@@ -64,6 +64,14 @@ class TestController extends Controller {
 		return $this->render('datatable');
 	}
 
+	/**
+	 * @Clips\Widgets\ListView("demo")
+	 * @Clips\Widget("grid")
+	 */
+	public function listview() {
+		return $this->render('listview');
+	}
+
 	public function redi() {
 		return $this->redirect(\Clips\site_url('test'));
 	}
