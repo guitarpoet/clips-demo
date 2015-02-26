@@ -171,6 +171,11 @@ class AutoResolution extends \Clips\Libraries\Sass\SassPlugin {
 {{/alias}},
 {{/resolutions}}
 	);
+	$pinet-alias: (
+{{#resolutions}}
+	{{alias}},
+{{/resolutions}}
+	);
 	$pinet-no-alias-resolutions: (
 {{#resolutions}}
 	{{value}},

@@ -103,4 +103,11 @@ class TestController extends Controller {
 	public function rule() {
 		$this->clips->assertFacts(array("hello", "world"));
 	}
+
+    /**
+     * @Clips\Widget({"Grid"})
+     */
+    public function grid() {
+        return $this->render('grid');
+    }
 }
