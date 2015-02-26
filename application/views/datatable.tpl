@@ -3,10 +3,14 @@
 		{context key='css'}
 	{/head}
 	{body}
-		{div class="container"}
-			{h1}DataTable Sample{/h1}
-			{datatable name='demo'}
-		{/div}
+		{container}
+			{row}
+				{h1}DataTable Sample{/h1}
+			{/row}
+			{row}
+				{datatable name='demo'}
+			{/row}
+		{/container}
 		{context key='js'}
 	{/body}
 {/html}

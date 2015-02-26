@@ -1,0 +1,13 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+#	RewriteCond $1 responsive/size/([^/]*)/(.*)$
+#	RewriteRule ^(.*)$ http://192.168.22.129:8080/image.server/resize/%2?size=%1 [L]
+
+	RewriteCond $1 !^(index\.php|.*.eot|.*.ttf|.*.woff|.*.svg|sitemap|images|.*.css|.*.less|.*.js|static|application|.*.txt|.*.html)
+	RewriteRule ^(.*)$ /~jack/clips_demo/index.php/$1 [L]
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+</IfModule>
