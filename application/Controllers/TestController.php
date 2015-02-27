@@ -108,6 +108,7 @@ class TestController extends Controller {
      * @Clips\Widget({"Grid"})
      */
     public function grid() {
+        \Clips\context('resolutions', array('mobile'=>320));
         return $this->render('grid');
     }
 }
