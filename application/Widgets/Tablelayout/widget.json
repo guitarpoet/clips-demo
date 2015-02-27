@@ -1,0 +1,16 @@
+{
+    "author": "Andy",
+    "date": "Wed Feb 11 14:16:40 2015",
+    "version": "1.0",
+    "name": "pinet.tablelayout",
+    "doc":"[doc]",
+    "depends": [""],
+    "js": {
+        "files" : []
+    },
+    "scss": {
+        "files": [
+
+        ]
+    }
+}

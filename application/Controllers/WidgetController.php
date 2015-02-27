@@ -123,4 +123,11 @@ class WidgetController extends Controller {
 	public function grid() {
 		return $this->render("tests/grid", array());
 	}
+
+    /**
+     * @Clips\Widget({"Tablelayout"})
+     */
+    public function table() {
+        return $this->render("tests/table", array());
+    }
 }
