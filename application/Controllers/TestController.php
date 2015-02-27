@@ -4,7 +4,7 @@ use Clips\Controller;
 use Clips\Resource;
 
 /**
- * @Clips\Widget({"demo", "html", "common", "lang"})
+ * @Clips\Widget({"demo", "html", "lang"})
  * @Clips\Meta(key = "hello", value = "world")
  */
 class TestController extends Controller {
