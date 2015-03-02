@@ -59,7 +59,7 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Widgets\DataTable("demo")
-     * @Clips\Widget({"SelectBoxIt"})
+     * @Clips\Widget({"grid", "SelectBoxIt"})
 	 */
 	public function datatable() {
 		return $this->render('datatable');
