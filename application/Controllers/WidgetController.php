@@ -130,4 +130,12 @@ class WidgetController extends Controller {
     public function table() {
         return $this->render("tests/table", array());
     }
+
+    /**
+     * @Clips\Widget({"grid", "Bootstrap", "Datepicker"})
+     * @Clips\Form("test")
+     */
+    public function date() {
+        return $this->render("tests/date", array());
+    }
 }
