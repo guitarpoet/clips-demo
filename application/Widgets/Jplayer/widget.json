@@ -1,0 +1,14 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 13:54:22 2015",
+	"version": "1.0",
+	"name": "demo.jplayer",
+	"doc":"Jplayer widget",
+	"js": {
+		"files" : ["jquery.jplayer"]
+	},
+	"depends": ["Jquery"],
+	"css": {
+		"files": ["blue.monday/css/jplayer.blue.monday"]
+	}
+}

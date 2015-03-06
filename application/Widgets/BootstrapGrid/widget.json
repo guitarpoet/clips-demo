@@ -1,0 +1,11 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Mon Feb  9 10:16:46 2015",
+	"version": "1.0",
+	"name": "bootstrap.grid",
+	"doc":"Bootstrap Grid widget",
+	"depends": ["BootstrapCommon"],
+	"scss": {
+		"files": ["mixins/_grid-framework", "mixins/_grid", "_grid"]
+	}
+}

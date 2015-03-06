@@ -1,0 +1,13 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 13:38:32 2015",
+	"version": "1.0",
+	"name": "demo.videojs",
+	"doc":"Videojs widget",
+	"js": {
+		"files" : ["video"]
+	},
+	"css": {
+		"files" : ["video-js.min"]
+	}
+}

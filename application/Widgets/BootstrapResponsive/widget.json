@@ -1,0 +1,11 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 14:32:36 2015",
+	"version": "1.0",
+	"name": "bootstrap responsive",
+	"doc":"Bootstrap Responsive widget",
+	"depends": ["BootstrapCommon"],
+	"scss": {
+		"files": ["mixins/_responsive-visibility", "_responsive-utilities", "_responsive-embed.scss"]
+	}
+}

@@ -59,6 +59,7 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Widgets\DataTable("demo")
+     * @Clips\Widget({"grid", "SelectBoxIt"})
 	 */
 	public function datatable() {
 		return $this->render('datatable');
@@ -102,5 +103,27 @@ class TestController extends Controller {
 	/** @Clips\Rules("sample") */
 	public function rule() {
 		$this->clips->assertFacts(array("hello", "world"));
+	}
+
+    /**
+     * @Clips\Widget({"Grid"})
+     */
+    public function grid() {
+        \Clips\context('resolutions', array('mobile'=>320));
+        return $this->render('grid');
+    }
+
+	/**
+	 * @Clips\Widget({"navigation"})
+	 */
+	public function navigation() {
+		return $this->render('navigation');
+	}
+
+	/**
+	 * @Clips\Widget({"navigation", "navigationbar"})
+	 */
+	public function bar() {
+		return $this->render('bar');
 	}
 }

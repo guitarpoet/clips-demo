@@ -1,0 +1,11 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Mon Feb  9 10:12:13 2015",
+	"version": "1.0",
+	"name": "demo.dialog",
+	"doc":"Dialog widget",
+	"depends": ["jquery","image","icon","button"],
+	"scss": {
+		"files": ["pinet_dialog","pinet_confirm_dialog","pinet_social_dialog"]
+	}
+}

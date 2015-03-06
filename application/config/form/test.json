@@ -28,5 +28,41 @@
                 "field": "create_date",
                 "label": "Create Date",
 				"state": "readonly"
+        },
+        {
+                "field": "date",
+                "label": "Date",
+                "rules": [
+                    {"type":"text"},
+                    {"data-role":"date"},
+                    "required"
+                ],
+                "messages": {
+                    "required": "The id field must be set"
+                }
+        },
+        {
+            "field": "year",
+            "label": "Year",
+            "rules": [
+                {"type":"text"},
+                {"data-role":"year"},
+                "required"
+            ],
+            "messages": {
+                "required": "The id field must be set"
+            }
+        },
+        {
+            "field": "month",
+            "label": "Month",
+            "rules": [
+                {"type":"text"},
+                {"data-role":"month"},
+                "required"
+            ],
+            "messages": {
+                "required": "The id field must be set"
+            }
         }
 ]

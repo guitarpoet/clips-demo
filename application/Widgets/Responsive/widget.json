@@ -1,0 +1,12 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 14:44:00 2015",
+	"version": "1.0",
+	"name": "demo.responsive",
+	"doc":"Responsive widget",
+	"depends": ["Jquery","Bootstrap","BootstrapResponsive"],
+	"files" : ["jquery-picture", "jquery-mobile", "pinet_responsive_init"],
+	"scss": {
+		"files": ["pinet_responsive_mixins","pinet_responsive"]
+	}
+}

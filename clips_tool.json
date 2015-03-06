@@ -6,7 +6,6 @@
 	"helpers":["web", "html"],
 	"default_view": "Smarty",
 	"debug_sass": true,
-	"sass_plugins": ["Sass\\AutoConstruct"],
 	"models": {
 		"clips_demo": {
 			"datasource": "mysql"
