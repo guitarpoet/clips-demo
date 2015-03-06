@@ -115,9 +115,18 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Widget({"navigation"})
+	 * @Clips\Context(key="test_data", value="actions")
+	 * @Clips\Object("testData")
 	 */
 	public function navigation() {
-		return $this->render('navigation');
+		$actions = array(
+			$this->testdata->action1,
+			$this->testdata->action2,
+			$this->testdata->action3,
+			$this->testdata->action4,
+			$this->testdata->action5
+		);
+		return $this->render('navigation', array('actions' => $actions));
 	}
 
 	/**

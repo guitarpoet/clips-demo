@@ -2,7 +2,7 @@
 	"table_prefix":"demo_",
 	"namespace": "Demo\\",
 	"route_rules": ["/application/rules/route.rules", "/rules/route.rules"],
-	"filters": ["Rules", "Form", "Clips\\Widgets\\Jquery\\Init", "Js", "Scss", "Css", "SmartyView", "MustacheView", "JsonView", "DirectView"],
+	"filters": ["Rules", "Form", "Scss", "Css", "SmartyView", "MustacheView", "JsonView", "DirectView"],
 	"helpers":["web", "html"],
 	"default_view": "Smarty",
 	"debug_sass": true,

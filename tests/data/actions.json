@@ -1,0 +1,38 @@
+{
+	"%action": {
+		"type": "client"
+	},
+	"action*": {
+		"$count": 10,
+		"$type": "Clips\\SimpleAction",
+		"label": "Action @",
+		"$template": "%action",
+		"content": "alert('This is action ' + @ + '!');",
+		"id": "!Clips\\sequence('id')",
+		"children": [
+			"$sub_action1",
+			"$sub_action2",
+			"$sub_action3"
+		]
+	},
+	"sub_action*": {
+		"$count": 10,
+		"$type": "Clips\\SimpleAction",
+		"label": "SubAction @",
+		"$template": "%action",
+		"content": "alert('This is action ' + @ + '!');",
+		"id": "!Clips\\sequence('id')",
+		"children": [
+			"$sub_sub_action1",
+			"$sub_sub_action2"
+		]
+	},
+	"sub_sub_action*": {
+		"$count": 10,
+		"$type": "Clips\\SimpleAction",
+		"label": "SubSubAction @",
+		"$template": "%action",
+		"content": "alert('This is action ' + @ + '!');",
+		"id": "!Clips\\sequence('id')"
+	}
+}
