@@ -12,7 +12,8 @@
 		"children": [
 			"$sub_action1",
 			"$sub_action2",
-			"$sub_action3"
+			"$sub_action3",
+			"$sub_action_server"
 		]
 	},
 	"sub_action*": {
@@ -33,6 +34,13 @@
 		"label": "SubSubAction @",
 		"$template": "%action",
 		"content": "alert('This is action ' + @ + '!');",
+		"id": "!Clips\\sequence('id')"
+	},
+	"sub_action_server": {
+		"$type": "Clips\\SimpleAction",
+		"label": "Sub Action Server",
+		"type": "server",
+		"content": "demo/navigation",
 		"id": "!Clips\\sequence('id')"
 	}
 }
