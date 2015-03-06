@@ -112,4 +112,18 @@ class TestController extends Controller {
         \Clips\context('resolutions', array('mobile'=>320));
         return $this->render('grid');
     }
+
+	/**
+	 * @Clips\Widget({"navigation"})
+	 */
+	public function navigation() {
+		return $this->render('navigation');
+	}
+
+	/**
+	 * @Clips\Widget({"navigation", "navigationbar"})
+	 */
+	public function bar() {
+		return $this->render('bar');
+	}
 }
