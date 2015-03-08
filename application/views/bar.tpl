@@ -46,9 +46,10 @@
                             </ul>
                         </li>
                     </ul>
+                    {navigation class="navbar-nav" actions=$actions}{/navigation}
                 </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
         </nav>
     {/body}
-    {context key="js"}
+    {js}
 {/html}

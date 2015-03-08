@@ -122,17 +122,22 @@ class TestController extends Controller {
 		$actions = array(
 			$this->testdata->action1,
 			$this->testdata->action2,
-			$this->testdata->action3,
-			$this->testdata->action4,
-			$this->testdata->action5
+			$this->testdata->action3
 		);
 		return $this->render('navigation', array('actions' => $actions));
 	}
 
 	/**
 	 * @Clips\Widget({"navigation", "navigationbar"})
+     * @Clips\Context(key="test_data", value="actions")
+     * @Clips\Object("testData")
 	 */
 	public function bar() {
-		return $this->render('bar');
+        $actions = array(
+            $this->testdata->action1,
+            $this->testdata->action2,
+            $this->testdata->action3
+        );
+        return $this->render('bar', array('actions' => $actions));
 	}
 }

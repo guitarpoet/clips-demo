@@ -3,12 +3,7 @@
         {context key='css'}
     {/head}
     {body}
-		{navigation actions=$actions}{/navigation}
-        <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">Profile</a></li>
-            <li role="presentation"><a href="#">Messages</a></li>
-        </ul>
+		{navigation class="nav-pills nav-stacked" actions=$actions}{/navigation}
 		{js}
     {/body}
 {/html}
