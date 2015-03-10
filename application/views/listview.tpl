@@ -19,6 +19,6 @@
 				{/li}
 			{/listview}
 		{/div}
-		{context key='js'}
+		{js}
 	{/body}
 {/html}

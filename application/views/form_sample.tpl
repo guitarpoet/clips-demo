@@ -13,6 +13,6 @@
 				{/div}
 			{/form}
 		{/div}
-		{context key='js'}
+		{js}
 	{/body}
 {/html}

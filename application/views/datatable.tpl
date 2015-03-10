@@ -11,6 +11,15 @@
 				{datatable name='demo'}
 			{/row}
 		{/container}
-		{context key='js'}
+		{js}
+        <script>
+            $(function() {
+                $('.datatable').each(function () {
+                    $(this).on('init.dt', function(){
+                        alert(1);
+                    });
+                })
+            });
+        </script>
 	{/body}
 {/html}
