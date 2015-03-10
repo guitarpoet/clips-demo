@@ -1,0 +1,25 @@
+groups:
+    name:
+        type: string
+        key: true
+        options:
+            limit: 20
+
+users:
+    username:
+        type: string
+        key: true
+        options:
+            limit: 20
+    email:
+        type: string
+        key: true
+        format: email
+        options:
+            limit: 255
+    password:
+        type: string
+        options:
+            limit: 60
+    group_id:
+        foreign_key: groups
