@@ -138,4 +138,13 @@ class WidgetController extends Controller {
     public function date() {
         return $this->render("tests/date", array());
     }
+
+	public function ajax() {
+		$request = $this->post();
+
+		$data = $request;
+
+		return $this->json($data);
+	}
+
 }
