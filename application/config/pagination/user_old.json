@@ -1,0 +1,27 @@
+{
+    "from": "users",
+    "columns": [
+        {
+            "data": "users.id",
+            "title": "ID",
+            "action": "user/show",
+            "primary": true,
+            "orderable": true
+        },
+        {
+            "data": "users.username",
+            "title": "Username",
+            "orderable": true
+        },
+        {
+            "data": "groups.name",
+            "refer": "groups.id",
+            "action": "group/show",
+            "title": "Group",
+            "orderable": true
+        }
+    ],
+    "join": [
+        "groups", {"users.group_id": "groups.id"}
+    ]
+}

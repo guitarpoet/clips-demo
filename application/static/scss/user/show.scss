@@ -1,0 +1,73 @@
+/// color
+$fx-gray-lighter: #dddddd !default;
+
+/// form
+$form-control-border-color: $fx-gray-lighter !default;
+$form-control-color: #666666 !default;
+$form-control-padding: 7px 15px;
+
+@mixin form-control() {
+	display: inline-block;
+	border: none;
+	@content;
+}
+
+.form-control {
+}
+
+input.form-control {
+	@include form-control() {
+		border-radius: 3px;
+		padding: $form-control-padding;
+		border: 1px solid $form-control-border-color;
+		color: $form-control-color;
+	};
+}
+
+@mixin form-group() {
+	@content;
+}
+
+@mixin form-label() {
+	display: inline-block;
+	@content;
+}
+
+.form-group {
+	.form-label {
+		@include form-label() {
+			padding: 5px 0px;
+		}
+	}
+}
+
+/// btn
+$btn-border-color: $fx-gray-lighter;
+$btn-padding: 5px 15px;
+$btn-color: #666666;
+
+@mixin btn() {
+	display: inline-block;
+	padding: $btn-padding;
+	@content;
+}
+
+.btn {
+	@include btn();
+}
+
+.btn-default {
+	@include btn() {
+		border-radius: 3px;
+		border: 1px solid $btn-border-color;
+		color: $btn-color;
+	}
+}
+
+@mixin section_user_show($args...) {
+
+	.clips-form {
+		padding-top: 30px;
+	}
+
+}

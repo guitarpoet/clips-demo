@@ -3,7 +3,7 @@
 use Clips\Controller;
 
 /**
- * @Clips\Widget({"html", "grid"})
+ * @Clips\Widget({"html", "lang", "grid"})
  * @Clips\Model({"user", "group"});
  */
 class UserController extends Controller {
@@ -16,23 +16,35 @@ class UserController extends Controller {
 	}
 
 	/**
-	 * @param $id
-	 * @return \Clips\Models\ViewModel
-	 *
-	 * @Clips\Form("user")
+	 * @Clips\Form("user_edit")
+	 * @Clips\Scss("user/show");
 	 */
 	public function show($id) {
 		$data = $this->user->load($id);
-		$this->formData("user", $data);
+		$this->formData("user_edit", $data);
 		return $this->render('user/show', array('groups' => $this->group->get(), 'edit_url'=>\Clips\site_url('/user/edit/'.$id)));
 	}
 
+
 	/**
-	 * @Clips\Form("user")
+	 * @Clips\Form("user_create")
+	 */
+	public function create() {
+		return $this->render('user/create', array('groups' =>
+			$this->group->get()));
+	}
+
+	public function create_form() {
+		$this->user->insert($this->user->cleanFields('users', $this->post()));
+		return $this->redirect(\Clips\site_url('user/index'));
+	}
+
+	/**
+	 * @Clips\Form("user_edit")
 	 */
 	public function edit($id) {
 		$data = $this->user->load($id);
-		$this->formData("user", $data);
+		$this->formData("user_edit", $data);
 		return $this->render('user/edit', array('groups' => $this->group->get()));
 	}
 
@@ -47,12 +59,8 @@ class UserController extends Controller {
 	}
 
 	public function delete() {
-		$data = $this->post();
-
-		$data = array(
-			'state' => false
-		);
-		return $this->json($data);
+		$ret = $this->user->delete($this->post('ids'));
+		return $this->json($ret);
 	}
 
 }

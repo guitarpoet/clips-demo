@@ -1,0 +1,35 @@
+[
+    {
+        "field": "id",
+        "label": "ID",
+        "rules": [
+            {"type":"number"},
+            "required"
+        ],
+        "messages": {
+            "required": "The id field must be set"
+        }
+    },
+    {
+        "field": "username",
+        "label": "Username",
+        "rules": [
+            "required"
+        ],
+        "messages": {
+            "required": "The username field must be set"
+        }
+    },
+    {
+        "field": "group_id",
+        "state": "readonly",
+        "label": "Group",
+        "rules": [
+            {"type":"number"},
+            "required"
+        ],
+        "messages": {
+            "required": "The group field must be set"
+        }
+    }
+]

@@ -1,0 +1,48 @@
+[
+	{
+		"field": "id",
+		"label": "ID",
+		"state": "readonly",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	},
+	{
+		"field": "username",
+		"label": "Username",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"20" },
+			{ "minlength":"4" },
+			"required"
+		]
+	},
+	{
+		"field": "email",
+		"label": "Email",
+		"rules": [
+			{ "type":"string" },
+			{ "maxlengh":"255" },
+			"required"
+		]
+	},
+	{
+		"field": "password",
+		"label": "Password",
+		"rules": [
+			{ "type":"password" },
+			{ "maxlengh":"60" },
+			{ "minlength":"4" },
+			"required"
+		]
+	},
+	{
+		"field": "group_id",
+		"label": "Group",
+		"rules": [
+			{ "type":"number" },
+			"required"
+		]
+	}
+]

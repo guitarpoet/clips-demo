@@ -1,25 +1,40 @@
 groups:
     name:
+        label: Group Name
+        refer: true
         type: string
         key: true
+        rules:
+            minlength: 4
         options:
             limit: 20
 
 users:
     username:
+        label: Username
+        refer: true
         type: string
         key: true
+        rules:
+            minlength: 4
         options:
             limit: 20
     email:
+        label: Email
         type: string
         key: true
         format: email
         options:
             limit: 255
     password:
+        label: Password
+        input_type: password
         type: string
+        pagination: false
+        rules:
+            minlength: 4
         options:
             limit: 60
     group_id:
+        label: Group
         foreign_key: groups

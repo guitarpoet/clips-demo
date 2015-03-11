@@ -1,0 +1,8 @@
+{
+	"from": "groups",
+	"columns": [
+		{ "data":"groups.id", "action":"group/show", "title":"ID" },
+		{ "data":"groups.name", "title":"Group Name" }
+	],
+	"join": []
+}

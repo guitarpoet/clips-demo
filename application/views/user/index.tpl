@@ -1,13 +1,12 @@
 {extends file="../base-layout.tpl"}
 	{block name="main"}
 		{container}
-			{button caption="删除"}
-				{literal}
-					var selectedItems = window.DatatableManager.getSelectedItems($('.datatable[name=user]'));
-					var id =
-					console.dir(selectedItems);
-				{/literal}
+			{button role="datatable-delete" for="user" uri="/user/delete"}
+				{lang}delete{/lang}
 			{/button}
+			{a uri="/user/create"}
+				{lang}add{/lang}
+			{/a}
 			{datatable name="user"}
 		{/container}
 	{/block}
