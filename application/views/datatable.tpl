@@ -88,7 +88,6 @@
 					datatable.DataTable().draw();
 				});
 			});
->>>>>>> 1f11cdfdd6f03977aeb4c98cd436d4a53e59b78c
         </script>
 	{/body}
 {/html}
