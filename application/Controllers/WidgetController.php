@@ -147,4 +147,19 @@ class WidgetController extends Controller {
 		return $this->json($data);
 	}
 
+	/**
+	 * @Clips\Widget({"html", "lang", "grid", "navigation"})
+	 * @Clips\Scss({"bootstrap_layout.scss"})
+	 * @Clips\Context(key="test_data", value="actions")
+	 * @Clips\Object("testData")
+	 */
+	public function basic() {
+		$actions = array(
+			$this->testdata->action1,
+			$this->testdata->action2,
+			$this->testdata->action3
+		);
+		return $this->render("bootstrap-layout", array('actions' => $actions));
+	}
+
 }

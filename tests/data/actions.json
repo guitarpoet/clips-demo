@@ -10,10 +10,6 @@
 		"content": "alert('This is action ' + @ + '!');",
 		"id": "!Clips\\sequence('id')",
 		"children": [
-			"$sub_action1",
-			"$sub_action2",
-			"$sub_action3",
-			"$sub_action_server"
 		]
 	},
 	"sub_action*": {

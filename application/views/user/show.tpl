@@ -10,7 +10,8 @@
 							{select options=$groups label-field="name" value-field="id"}
 							{/select}
 						{/field}
-						{a class="btn btn-default" href=$edit_url}edit{/a}
+						{a class="btn btn-default" uri='user/edit/'}edit{/a}
+						{action class="btn btn-default"}{/action}
 					{/form}
 				{/column}
 			{/row}
