@@ -1,6 +1,6 @@
 {extends file="../bootstrap-layout.tpl"}
 	{block name="toolbar"}
-		{a class="btn btn-default" role="form-action" for="user" uri="/user/edit"}
+		{a class="btn btn-primary" uri="/user/edit/26"}
 			{lang}edit{/lang}
 		{/a}
 	{/block}

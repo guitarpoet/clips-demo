@@ -1,5 +1,8 @@
 {extends file="../bootstrap-layout.tpl"}
 	{block name="toolbar"}
+		{a class="btn btn-primary" role="form-action" for="user_edit"}
+			{lang}create{/lang}
+		{/a}
 	{/block}
 	{block name="workbench"}
 		{form name="user_create"}
@@ -8,6 +11,5 @@
 				{select options=$groups label-field="name" value-field="id"}
 				{/select}
 			{/field}
-			{submit value="add"}
 		{/form}
 	{/block}
