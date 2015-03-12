@@ -25,7 +25,7 @@
 									{row id="toolbar"}
 										{block name="toolbar"}{/block}
 									{/row}
-									{row}
+									{row id="editarea"}
 										{block name="workbench"}{/block}
 									{/row}
 								{/column}

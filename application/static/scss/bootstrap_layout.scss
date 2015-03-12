@@ -47,8 +47,8 @@ $base-navigation-bg: #50ACE2;
 			}
 
 			#menu {
-				@include multilevel-nav-pills();
-				@include multilevel-nav-stacked();
+//				@include multilevel-nav-pills();
+//				@include multilevel-nav-stacked();
 				margin: 0;
 				background-color: #3A4F72;
 				text-align: center;
@@ -66,6 +66,14 @@ $base-navigation-bg: #50ACE2;
 					}
 				}
 			}
+		}
+
+		@mixin content-style() {
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			padding-left: 40px;
+			padding-right: 40px;
 		}
 
 		#content {
@@ -104,8 +112,7 @@ $base-navigation-bg: #50ACE2;
 
 				.navbar {
 					height: 100%;
-					padding-left: 20px;
-					padding-right: 20px;
+					@include content-style();
 					&-header {
 						display: inline-table;
 						vertical-align: top;
@@ -137,12 +144,26 @@ $base-navigation-bg: #50ACE2;
 					}
 				}
 
+
 				#toolbar {
-					width: 100%;
-					margin: 0;
-					padding: 0;
-					height: 50px;
+					@include content-style();
+					padding-top: 15px;
+					padding-bottom: 15px;
 					background-color: #FAF9F8;
+				}
+
+				#editarea {
+					@include content-style();
+					.dataTables_wrapper {
+						margin-top: 20px;
+						.dataTables_length {
+							display: none;
+						}
+						.dataTables_filter {
+							display: none;
+						}
+					}
+
 				}
 			}
 
