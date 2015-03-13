@@ -1,6 +1,6 @@
 {extends file="../bootstrap-layout.tpl"}
 	{block name="toolbar"}
-		{a class="btn btn-primary" role="form-action" for="user_create"}
+		{a class="btn btn-primary" form-for="user_create"}
 			{lang}create{/lang}
 		{/a}
 	{/block}

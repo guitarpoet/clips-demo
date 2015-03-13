@@ -16,10 +16,11 @@ class UserController extends Controller {
 
 	/**
 	 * @Clips\Widgets\DataTable("user")
+	 * @Clips\Form("index_edit")
 	 * @Clips\Actions("user")
 	 */
 	public function index() {
-		return $this->render('user/index');
+		return $this->render('user/index', array('groups' => $this->group->get()));
 	}
 
 	/**

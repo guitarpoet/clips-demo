@@ -23,12 +23,12 @@
 								{/column}
 							{/row}
 						{/column}
+						{column id="toolbar"}
+							{block name="toolbar"}{/block}
+						{/column}
 						{column id="workbench"}
 							{row}
 								{column}
-									{row id="toolbar"}
-										{block name="toolbar"}{/block}
-									{/row}
 									{row id="editarea"}
 										{block name="workbench"}{/block}
 									{/row}
