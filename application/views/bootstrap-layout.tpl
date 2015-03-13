@@ -2,9 +2,13 @@
 	{block name="main"}
 		{container}
 			{row}
-				{column id="navigation"}
-					{h3 id="brand"}Brand{/h3}
-					{navigation id="menu" actions=$actions}{/navigation}
+				{column class="navbar" id="navigationbar"}
+					{column class="navbar-header"}
+						{h3 id="brand"}Brand{/h3}
+					{/column}
+					{column class="navbar-section"}
+						{navigation id="menu" actions=$actions}{/navigation}
+					{/column}
 				{/column}
 				{column id="content"}
 					{row}
@@ -12,9 +16,9 @@
 							{row}
 								{column}
 									{row class="navbar"}
-										{h3 class="navbar-header"}
-											page-heading
-										{/h3}
+										{column class="navbar-header"}
+											{h3}page-heading{/h3}
+										{/column}
 									{/row}
 								{/column}
 							{/row}
