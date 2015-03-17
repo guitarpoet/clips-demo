@@ -1,0 +1,75 @@
+@mixin init_doc() {
+    .container {
+        color: #526165;
+        #navigation {
+            background-color: #ffffff;
+            #menu {
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: left;
+                background-color: transparent;
+
+                // fx nav bug
+                > li > a {
+                    display: block;
+                    color: #526165;
+                    border-left: 3px solid transparent;
+                    border-radius: 0;
+                    &:hover,
+                    &:focus {
+                        background-color: transparent;
+                        color: #000000;
+                        border-left: 3px solid #1ebb22;
+                    }
+                }
+
+                // ztree style
+                .level1 {
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    > a {
+                        color: #526165;
+                        &:hover {
+                            color: #1ebb22;
+                        }
+                    }
+                }
+
+                #menu_1_a {
+                    display: none;
+                }
+
+            }
+        }
+
+        #content {
+            #quickbar {
+                background-color: #fbfbf1;
+                .navbar {
+                    padding-left: 120px;
+                    padding-right: 120px;
+                }
+            }
+
+            #workbench {
+                background-color: #fbfbf1;
+                #editarea {
+                    padding-left: 120px;
+                    padding-right: 120px;
+                    .markdown-body {
+                        h1,h2,h3,h4,h5,h6 {
+                            color: #1ebb22;
+                        }
+                        h2,h3,h4,h5,h6 {
+                            padding-left: 20px;
+                        }
+                        p {
+                            padding-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

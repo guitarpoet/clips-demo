@@ -4,7 +4,7 @@
 			{row}
 				{column id="navigation"}
 					{h3 id="brand"}Brand{/h3}
-					{navigation id="menu" actions=$actions}{/navigation}
+					{navigation id="menu" data-role="menu"}{/navigation}
 				{/column}
 				{column id="content"}
 					{row}
