@@ -1,4 +1,4 @@
-<?php namespace Demo\Controllers; in_array(__FILE__, get_included_files()) or exit("No direct sript access allowed");
+<?php namespace Demo\Controllers; in_array(__FILE__, get_included_files()) or exit("No direct script access allowed");
 
 use Clips\Controller;
 
@@ -7,7 +7,7 @@ use Clips\Controller;
  *
  * @author Andy
  * @version 1.0
- * @date Thu Mar 12 09:54:44 2015
+ * @date Tue Mar 17 13:51:22 2015
  *
  * @Clips\Widget({"html", "lang", "grid", "scaffold"})
  * @Clips\Model({ "user", "group" });
@@ -16,11 +16,10 @@ class UserController extends Controller {
 
 	/**
 	 * @Clips\Widgets\DataTable("user")
-	 * @Clips\Form("index_edit")
 	 * @Clips\Actions("user")
 	 */
 	public function index() {
-		return $this->render('user/index', array('groups' => $this->group->get()));
+		return $this->render('user/index');
 	}
 
 	/**
@@ -75,12 +74,10 @@ class UserController extends Controller {
 	public function delete($id = null) {
 		if($id) {
 			$this->user->delete($id);
-			return $this->redirect(\Clips\site_url('user/index'));
 		}
 		else {
-			$this->user->delete($this->post('ids'));
-			return $this->json(array());
+			 $this->user->delete($this->post('ids'));
 		}
+		return $this->redirect(\Clips\site_url('user/index'));
 	}
-
 }
