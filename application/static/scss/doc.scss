@@ -1,45 +1,49 @@
 @mixin init_doc() {
     .container {
         color: #526165;
-        #navigation {
+        #navigationbar {
             background-color: #ffffff;
-            #menu {
-                padding-left: 20px;
-                padding-right: 20px;
-                text-align: left;
-                background-color: transparent;
 
-                // fx nav bug
-                > li > a {
-                    display: block;
-                    color: #526165;
-                    border-left: 3px solid transparent;
-                    border-radius: 0;
-                    &:hover,
-                    &:focus {
-                        background-color: transparent;
-                        color: #000000;
-                        border-left: 3px solid #1ebb22;
-                    }
-                }
+			.navbar-section {
+				background-color: transparent;
+			}
 
-                // ztree style
-                .level1 {
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    > a {
-                        color: #526165;
-                        &:hover {
-                            color: #1ebb22;
-                        }
-                    }
-                }
+			#menu {
+				padding-left: 20px;
+				padding-right: 20px;
+				text-align: left;
+				background-color: transparent !important;
 
-                #menu_1_a {
-                    display: none;
-                }
+				// fx nav bug
+				> li > a {
+					display: block;
+					color: #526165;
+					border-left: 3px solid transparent;
+					border-radius: 0;
+					&:hover,
+					&:focus {
+						background-color: transparent;
+						color: #000000;
+						border-left: 3px solid #1ebb22;
+					}
+				}
 
-            }
+				// ztree style
+				.level1 {
+					padding-top: 10px;
+					padding-bottom: 10px;
+					> a {
+						color: #526165;
+						&:hover {
+							color: #1ebb22;
+						}
+					}
+				}
+
+				#menu_1_a {
+					display: none;
+				}
+			}
         }
 
         #content {
