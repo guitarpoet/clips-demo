@@ -7,7 +7,7 @@
 						{h3 id="brand"}Brand{/h3}
 					{/column}
 					{column class="navbar-section"}
-						{navigation id="menu" actions=$actions}{/navigation}
+						{block name="navbar"}{/block}
 					{/column}
 				{/column}
 				{column id="content"}

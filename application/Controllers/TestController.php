@@ -140,4 +140,12 @@ class TestController extends Controller {
         );
         return $this->render('bar', array('actions' => $actions));
 	}
+
+	/**
+	 * @Clips\Widget({"html", "grid", "navigation", "markup", "scaffold"});
+	 * @Clips\Scss({"doc"});
+	 */
+	public function doc() {
+		return $this->render('doc');
+	}
 }
