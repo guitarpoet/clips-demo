@@ -142,10 +142,35 @@ class TestController extends Controller {
 	}
 
 	/**
-	 * @Clips\Widget({"html", "grid", "navigation", "markup", "scaffold"});
-	 * @Clips\Scss({"doc"});
+	 * @Clips\Widget({"html", "grid", "navigation", "markup", "scaffold"})
+	 * @Clips\Scss({"doc"})
 	 */
 	public function doc() {
 		return $this->render('doc');
 	}
+
+	/**
+	 * @Clips\Widget({"html"})
+	 * @Clips\Scss({"error"})
+	 */
+	public function showerror() {
+		return $this->render('error/notification');
+	}
+
+	/**
+	 * @Clips\Form("test")
+	 * @Clips\Widget({"html"})
+	 */
+	public function phone() {
+		return $this->render('phone');
+	}
+
+	/**
+	 * @Clips\Widget({"html"})
+	 * @Clips\Scss({"404"});
+	 */
+	public function show404() {
+		return $this->render('404');
+	}
+
 }
