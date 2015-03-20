@@ -173,4 +173,18 @@ class TestController extends Controller {
 		return $this->render('404');
 	}
 
+	/**
+	 * @Clips\Widget({"html", "image"})
+	 */	
+	public function pic() {
+		return $this->render('pic');
+	}
+
+	/**
+	 * @Clips\Widget({"html", "alert"})
+	 */
+	public function notice() {
+		return $this->render('notice');
+	}	
+	
 }
