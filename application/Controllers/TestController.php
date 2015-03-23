@@ -181,7 +181,7 @@ class TestController extends Controller {
 	}
 
 	/**
-	 * @Clips\Widget({"html", "alert"})
+	 * @Clips\Widget({"html", "alert", "owlcarousel"})
 	 */
 	public function notice() {
 		return $this->render('notice');
