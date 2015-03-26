@@ -67,9 +67,28 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Widgets\ListView("demo")
-	 * @Clips\Widget("grid")
+	 * @Clips\Widget("grid", "lang")
 	 */
 	public function listview() {
+
+		\Clips\context('current_bundle', 'zh-CN');
+		
+		$js = <<<TEXT
+			$('.listview.clips-listview').on('list.beforeDraw', function(e, list, data){
+				$.each(data.data, function(i, item){
+//					handle data
+				});
+			});		
+		
+//			$('.listview.clips-listview').on('list.loaded', function(e, list, data){
+//				// get all listview item
+//				var items = list.children('.listview_item').not('.listview_item_template');
+//				console.log(items);
+//			});
+TEXT;
+		
+		\Clips\clips_context('jquery_init', $js, true);
+		
 		return $this->render('listview');
 	}
 

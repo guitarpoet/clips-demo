@@ -5,8 +5,8 @@
 	{body}
 		{div class="container"}
 			{h1}ListView Sample{/h1}
-			{listview name='demo'}
-				{li style="width:200px;padding:15px;" class="item listview_item_template"}
+			{listview id="list" name='demo'}
+				{li style="width: calc(25% - 53px) ; padding:15px;margin-right:20px;margin-bottom:20px;" class="item listview_item_template"}
 					{b}_(users_username){/b}
 					{ul}
 						{li}
