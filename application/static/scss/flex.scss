@@ -1,0 +1,78 @@
+@mixin full-screen() {
+	body, html {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+@mixin full-parent() {
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin flex-vertial() {
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+
+@mixin flex-center() {
+	// 主轴
+	justify-content: center;
+	// 辅轴
+	align-items: center;
+}
+
+@include full-screen();
+
+.container {
+	display: flex;
+	@include full-parent();
+	@include flex-vertial();
+}
+
+.container {
+	header {
+		padding: 10px;
+		border-bottom: 1px solid #EA6C6C;
+	}
+	
+	section {
+		position: relative;
+		flex: 1;
+	}
+	
+	footer {
+		padding: 10px;
+		border-top: 1px solid #1c94c4;
+	}
+}
+
+.card {
+	display: flex;
+	position: absolute;
+	@include flex-vertial();
+	@include full-parent();
+}
+
+.image {
+	width: 100%;
+	height: 230px;
+	background-color: lighten(#EA6C6C, 10%);
+}
+
+.social-group {
+	padding-top: 30px;
+	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	
+	.btn {
+		padding: 30px;
+		border: 1px solid #c0c0c0;
+	}
+}
+ 

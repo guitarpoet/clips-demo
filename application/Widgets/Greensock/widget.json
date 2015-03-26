@@ -1,0 +1,13 @@
+{
+	"author": "Andy",
+	"date": "Thu Mar 26 10:55:26 2015",
+	"version": "1.0",
+	"name": "Greensock",
+	"doc":"greensock",
+	"js": {
+		"files": [
+			"easing/EasePack",
+			"TweenLite"
+		]
+	}
+}

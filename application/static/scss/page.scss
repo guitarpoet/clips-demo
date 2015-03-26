@@ -1,0 +1,125 @@
+// Hexagone mixin
+@mixin hexagone2($size, $color) {
+
+	$width : ($size/2) / 0.86; //cos(30deg)
+
+	display: block;
+	height: $size;
+	width: $width;
+	position: relative;
+	background: $color;
+
+	&:before {
+		content: "";
+		display: block;
+		width: $width;
+		height: $size;
+		background: $color;
+		-webkit-transform: rotateZ(-60deg);
+		-moz-transform: rotateZ(-60deg);
+		-moz-transform-style: preserve-3d;
+	}
+
+	&:after {
+		content: "";
+		display: block;
+		width: $width;
+		height: $size;
+		background: $color;
+		-webkit-transform: rotateZ(60deg);
+		-moz-transform: rotateZ(60deg);
+		-moz-transform-style: preserve-3d;
+		position: absolute;
+		top: 0;
+	}
+}
+
+@mixin clearfix {
+	*zoom: 1;
+	&:before,
+	&:after {
+		display: table;
+		content: "";
+		// Fixes Opera/contenteditable bug:
+		// http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+		line-height: 0;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+.container {
+	padding: 0;
+	margin: 0;
+	@include clearfix();
+}
+
+$hexaSize : 100px;
+$width : ($hexaSize/2) / 0.86;
+.hexa {
+	float: left;
+	margin-bottom: 1px;
+	margin-left: $width/2;
+	@include hexagone2($hexaSize, transparent);
+
+	&:hover {
+		.front {
+			-webkit-transform: translateZ(-1px) rotateY(180deg);
+			-moz-transform: translateZ(-1px) rotateY(180deg);
+			z-index: 800;
+		}
+
+		.back {
+			-webkit-transform: translateZ(1px) rotateY(0deg);
+			-moz-transform: translateZ(1px) rotateY(0deg);
+			z-index: 900;
+		}
+	}
+
+	.front {
+		@include hexagone2($hexaSize, #dc276c);
+		-webkit-transition: all 600ms;
+		-moz-transition: all 600ms;
+		transition: all 600ms;
+		position: absolute;
+		top: 0;
+
+		-webkit-transform: translateZ(1px) rotateY(0deg);
+		-moz-transform: translateZ(1px) rotateY(0deg);
+
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+
+		/*-webkit-backface-visibility: hidden;*/
+		/*-moz-backface-visibility: hidden;*/
+
+		z-index: 900;
+	}
+
+	.back {
+		@include hexagone2($hexaSize, #ffb533);
+		-webkit-transition: all 600ms;
+		-moz-transition: all 600ms;
+		transition: all 600ms;
+		position: absolute;
+		top: 0;
+
+		-webkit-transform: translateZ(-1px) rotateY(-180deg);
+		-moz-transform: translateZ(-1px) rotateY(-180deg);
+
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+
+		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+
+		z-index: 800;
+
+		opacity: 0.7;
+	}
+
+	&.top {
+		top: -$hexaSize/2;
+	}
+}

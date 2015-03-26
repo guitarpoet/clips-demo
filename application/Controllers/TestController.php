@@ -204,6 +204,48 @@ TEXT;
 	 */
 	public function notice() {
 		return $this->render('notice');
+	}
+
+	/**
+	 * @Clips\Widget({"html", "Image"})
+	 * @Clips\Scss({"show"})
+	 * @Clips\Widget({"greensock"});
+	 * @Clips\Js({ "application/static/js/canvasbg"})
+	 */
+	public function show() {
+		return $this->render('show');
+	}
+
+	/**
+	 * @Clips\Widget({"html", "Image"})
+	 * @Clips\Scss({"page"})
+	 * @Clips\Widget({"greensock"});
+	 * @Clips\Js({"application/static/js/page"});
+	 */
+	public function page() {
+		return $this->render('page');
+	}	
+
+	/**
+	 * @Clips\Widget({"html", "grid"})
+	 * @Clips\Scss({"flex"});
+	 */
+	public function flex() {
+		$metas = array(
+			'http-equiv="X-UA-Compatible" content="IE=edge"',
+			'name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"',
+			'name="renderer" content="webkit"',
+			'http-equiv="Cache-Control" content="no-siteapp"',
+			'name="mobile-web-app-capable" content="yes"',
+			'name="apple-mobile-web-app-capable" content="yes"',
+			'name="apple-mobile-web-app-status-bar-style" content="black"',
+			'name="apple-mobile-web-app-title" content="Yizhifu"'
+		);
+		foreach ($metas as $meta) {
+			\Clips\context('html_meta', array($meta), true);
+		}		
+		
+		return $this->render('flex');
 	}	
 	
 }
