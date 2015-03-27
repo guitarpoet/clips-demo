@@ -219,7 +219,7 @@ TEXT;
 	/**
 	 * @Clips\Widget({"html", "Image"})
 	 * @Clips\Scss({"page"})
-	 * @Clips\Widget({"greensock"})
+	 * @Clips\Widget({"greensock", "morphingmodal"})
 	 */
 	public function page() {
 		return $this->render('page');
@@ -245,6 +245,13 @@ TEXT;
 		}		
 		
 		return $this->render('flex');
-	}	
+	}
+
+	/**
+	 * @Clips\Widget({"bootstrap", "BootstrapCollapse"})
+	 */
+	public function bts() {
+		return $this->render('bts');
+	}
 	
 }
