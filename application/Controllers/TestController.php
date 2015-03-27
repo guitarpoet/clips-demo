@@ -209,7 +209,7 @@ TEXT;
 	/**
 	 * @Clips\Widget({"html", "Image"})
 	 * @Clips\Scss({"show"})
-	 * @Clips\Widget({"greensock"});
+	 * @Clips\Widget({"greensock"})
 	 * @Clips\Js({ "application/static/js/canvasbg"})
 	 */
 	public function show() {
@@ -219,8 +219,7 @@ TEXT;
 	/**
 	 * @Clips\Widget({"html", "Image"})
 	 * @Clips\Scss({"page"})
-	 * @Clips\Widget({"greensock"});
-	 * @Clips\Js({"application/static/js/page"});
+	 * @Clips\Widget({"greensock"})
 	 */
 	public function page() {
 		return $this->render('page');

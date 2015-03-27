@@ -1,15 +1,31 @@
+$hexaSize : 100px;
+$width : ($hexaSize/2) / 0.86;
+$left-top-border: 1px solid #adad34;
+$center-top-border: 1px solid #adad34;
+$right-top-border: 1px solid #adad34;
+$right-bottom-border: 1px solid #adad34;
+$center-bottom-border: 1px solid #adad34;
+$left-bottom-border: 1px solid #adad34;
+
 // Hexagone mixin
-@mixin hexagone2($size, $color) {
+@mixin hexagone2($size, $color, $enableBorder: false) {
 
 	$width : ($size/2) / 0.86; //cos(30deg)
+//    overflow: hidden;
 
 	display: block;
 	height: $size;
 	width: $width;
 	position: relative;
 	background: $color;
-
+    @if $enableBorder {
+        border-top: $center-top-border;
+        border-bottom: $center-bottom-border;
+    }
+    
 	&:before {
+        position: absolute;
+        overflow: hidden;
 		content: "";
 		display: block;
 		width: $width;
@@ -18,9 +34,15 @@
 		-webkit-transform: rotateZ(-60deg);
 		-moz-transform: rotateZ(-60deg);
 		-moz-transform-style: preserve-3d;
+        z-index: -1;
+        @if $enableBorder {
+            border-top: $left-top-border;
+            border-bottom: $right-bottom-border;
+        }
 	}
 
 	&:after {
+        position: absolute;
 		content: "";
 		display: block;
 		width: $width;
@@ -31,7 +53,22 @@
 		-moz-transform-style: preserve-3d;
 		position: absolute;
 		top: 0;
+        z-index: -1;
+        @if $enableBorder {
+            border-top: $right-top-border;
+            border-bottom: $left-bottom-border;
+        }
 	}
+
+    &--bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: $width * 2;
+        height: $hexaSize;
+        margin-left: -( $width / 2 ) ;
+        z-index: -300;
+    }
 }
 
 @mixin clearfix {
@@ -49,17 +86,27 @@
 	}
 }
 
-.container {
+.column {
+    width: $width;
 	padding: 0;
 	margin: 0;
+    float: left;
 	@include clearfix();
 }
 
-$hexaSize : 100px;
-$width : ($hexaSize/2) / 0.86;
+.column:nth-child(n+2) {
+    margin-left: $width;
+}
+
+.column:nth-child(even) {
+    padding-top: $hexaSize / 2;
+}
+
+
 .hexa {
+    position: relative;
 	float: left;
-	margin-bottom: 1px;
+	margin-bottom: 10px;
 	margin-left: $width/2;
 	@include hexagone2($hexaSize, transparent);
 
@@ -68,17 +115,26 @@ $width : ($hexaSize/2) / 0.86;
 			-webkit-transform: translateZ(-1px) rotateY(180deg);
 			-moz-transform: translateZ(-1px) rotateY(180deg);
 			z-index: 800;
+
+            .front--bg {
+                background-color: transparent;
+            }
+
 		}
 
 		.back {
 			-webkit-transform: translateZ(1px) rotateY(0deg);
 			-moz-transform: translateZ(1px) rotateY(0deg);
 			z-index: 900;
+
+            .back--bg {
+//                background-color: transparent;
+            }
 		}
 	}
 
 	.front {
-		@include hexagone2($hexaSize, #dc276c);
+		@include hexagone2($hexaSize, transparent, true);
 		-webkit-transition: all 600ms;
 		-moz-transition: all 600ms;
 		transition: all 600ms;
@@ -98,7 +154,7 @@ $width : ($hexaSize/2) / 0.86;
 	}
 
 	.back {
-		@include hexagone2($hexaSize, #ffb533);
+		@include hexagone2($hexaSize, transparent, true);
 		-webkit-transition: all 600ms;
 		-moz-transition: all 600ms;
 		transition: all 600ms;
@@ -116,10 +172,6 @@ $width : ($hexaSize/2) / 0.86;
 
 		z-index: 800;
 
-		opacity: 0.7;
 	}
 
-	&.top {
-		top: -$hexaSize/2;
-	}
 }
