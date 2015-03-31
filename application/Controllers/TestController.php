@@ -67,7 +67,7 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Widgets\ListView("demo")
-	 * @Clips\Widget("grid", "lang")
+	 * @Clips\Widget({"grid", "image", "lang"})
 	 */
 	public function listview() {
 

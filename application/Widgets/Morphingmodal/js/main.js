@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 	//trigger the animation - open modal window
 	$('[data-type="modal-trigger"]').on('click', function(){
 		var actionBtn = $(this),
-			scaleValue = retrieveScale(actionBtn.next('.cd-modal-bg'));
+			scaleValue = retrieveScale(actionBtn, actionBtn.next('.cd-modal-bg'));
 		
 		actionBtn.addClass('to-circle');
 		actionBtn.next('.cd-modal-bg').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
@@ -26,13 +26,15 @@ jQuery(document).ready(function($){
 		if($('.cd-section.modal-is-visible').length > 0) window.requestAnimationFrame(updateLayer);
 	});
 
-	function retrieveScale(btn) {
-		var btnRadius = btn.width()/2,
+	function retrieveScale(btn, bg) {
+		var btnRadius = bg.width()/2,
 			left = btn.offset().left + btnRadius,
 			top = btn.offset().top + btnRadius - $(window).scrollTop(),
-			scale = scaleValue(top, left, btnRadius, $(window).height(), $(window).width());
-
-		btn.css('position', 'fixed').velocity({
+			scale = scaleValue(top, left, btnRadius, $(window).width(), $(window).height());
+		
+		console.log(btnRadius);
+		
+		bg.css('position', 'fixed').velocity({
 			top: top - btnRadius,
 			left: left - btnRadius,
 			translateX: 0
@@ -40,10 +42,11 @@ jQuery(document).ready(function($){
 
 		return scale;
 	}
-
+	
 	function scaleValue( topValue, leftValue, radiusValue, windowW, windowH) {
 		var maxDistHor = ( leftValue > windowW/2) ? leftValue : (windowW - leftValue),
 			maxDistVert = ( topValue > windowH/2) ? topValue : (windowH - topValue);
+		console.log(maxDistHor);
 		return Math.ceil(Math.sqrt( Math.pow(maxDistHor, 2) + Math.pow(maxDistVert, 2) )/radiusValue);
 	}
 

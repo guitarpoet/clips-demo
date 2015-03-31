@@ -9,7 +9,7 @@
 		{block name="head"}{/block}
 		<!-- End Of Head -->
 		{block name="main"}{/block}
-		<!-- End Of Main -->
+		<!-- End Of Main -->`
 		{block name="foot"}{/block}
 		<!-- End Of Foot -->
 		{js}

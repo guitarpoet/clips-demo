@@ -6,9 +6,12 @@
 		{div class="container"}
 			{h1}ListView Sample{/h1}
 			{listview id="list" name='demo'}
-				{li style="width: calc(25% - 53px) ; padding:15px;margin-right:20px;margin-bottom:20px;" class="item listview_item_template"}
+				{li style="width: calc(25% - 10px); padding:0px; margin-right: 10px; margin-bottom: 10px;" class="item listview_item_template"}
 					{b}_(users_username){/b}
 					{ul}
+						{li}
+							{resimg data-image='deli/home/cheese-1_larges.jpg' data-default-image='yizhifu.png'}
+						{/li}
 						{li}
 							ID: _(users_id)
 						{/li}
