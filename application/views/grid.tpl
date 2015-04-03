@@ -4,7 +4,7 @@
     {/head}
     {body}
         {container}
-            {row layout=[3,4] layout-1440=[12,12]}
+            {row layout=[12,12] layout-pad=[6,6]  layout-pc=[8,4]}
                 {h1}Hello {$world}{/h1}
                 {h1}{demo}{/h1}
             {/row}

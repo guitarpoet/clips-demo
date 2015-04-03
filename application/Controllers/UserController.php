@@ -80,4 +80,5 @@ class UserController extends Controller {
 		}
 		return $this->redirect(\Clips\site_url('user/index'));
 	}
+	
 }

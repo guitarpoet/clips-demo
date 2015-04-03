@@ -1,0 +1,17 @@
+{
+	"author": "Andy",
+	"date": "Tue Mar 31 16:55:50 2015",
+	"version": "1.0",
+	"name": "Fullpage",
+	"doc":"fullpage",
+	"js": {
+		"files": [
+			"jquery.fullPage"
+		]
+	},
+	"scss": {
+		"files": [
+			"jquery.fullPage"
+		]
+	}
+}

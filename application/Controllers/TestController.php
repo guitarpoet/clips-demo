@@ -128,8 +128,23 @@ TEXT;
      * @Clips\Widget({"Grid"})
      */
     public function grid() {
-        \Clips\context('resolutions', array('mobile'=>320));
-        return $this->render('grid');
+	    \Clips\context('resolutions', array('320', '480', '640', '720' => 'pad', '1280', '1440' => 'pc', '1920', '2880'));
+
+	    $metas = array(
+		    'http-equiv="X-UA-Compatible" content="IE=edge"',
+		    'name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"',
+		    'name="renderer" content="webkit"',
+		    'http-equiv="Cache-Control" content="no-siteapp"',
+		    'name="mobile-web-app-capable" content="yes"',
+		    'name="apple-mobile-web-app-capable" content="yes"',
+		    'name="apple-mobile-web-app-status-bar-style" content="black"',
+		    'name="apple-mobile-web-app-title" content="Yizhifu"'
+	    );
+	    foreach ($metas as $meta) {
+		    \Clips\context('html_meta', array($meta), true);
+	    }
+
+	    return $this->render('grid');
     }
 
 	/**
@@ -147,7 +162,7 @@ TEXT;
 	}
 
 	/**
-	 * @Clips\Widget({"navigation", "navigationbar"})
+	 * @Clips\Widget({"navigation", "navigationbar", "bootstrapCommon"})
      * @Clips\Context(key="test_data", value="actions")
      * @Clips\Object("testData")
 	 */
@@ -252,6 +267,30 @@ TEXT;
 	 */
 	public function bts() {
 		return $this->render('bts');
+	}
+
+	/**
+	 * @Clips\Widget({"html", "grid"})
+	 * @Clips\Scss({"fullpage"})
+	 */
+	public function fullpage() {
+		\Clips\context('resolutions', array('320', '480', '640', '720' => 'pad', '1280' => 'pc', '1440', '1920', '2880'));
+		
+		$metas = array(
+			'http-equiv="X-UA-Compatible" content="IE=edge"',
+			'name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"',
+			'name="renderer" content="webkit"',
+			'http-equiv="Cache-Control" content="no-siteapp"',
+			'name="mobile-web-app-capable" content="yes"',
+			'name="apple-mobile-web-app-capable" content="yes"',
+			'name="apple-mobile-web-app-status-bar-style" content="black"',
+			'name="apple-mobile-web-app-title" content="Yizhifu"'
+		);
+		foreach ($metas as $meta) {
+			\Clips\context('html_meta', array($meta), true);
+		}		
+		
+		return $this->render('fullpage');
 	}
 	
 }
