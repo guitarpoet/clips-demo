@@ -1,0 +1,116 @@
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	overflow-x: hidden !important;
+	overflow-y: auto;
+}
+
+#header {
+	position: relative;
+	width: 100%;
+	&.fixed {
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 30;
+	}
+}
+
+#menubar {
+	&.fixed {
+		position: fixed;
+		height: auto;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 1;
+	}
+}
+
+#menu {
+	position: relative;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 0;
+	overflow: hidden;
+	transition: all .2s ease-out;
+
+	li {
+		color: #FFF;
+		text-align: center;
+		float: left;
+		display: block;
+		padding: 20px 0;
+		opacity: 1;
+		transition: opacity .2s ease-out;
+	}
+
+	&.show li {
+		opacity: 0.2;
+	}
+
+	&.notrans {
+		transition: none;
+	}
+
+	&.open {
+		height: auto;
+	}
+}
+
+#pullmenu-icon {
+	width: 40px;
+	height: 5px;
+	background: #353541;
+	position: absolute;
+	left: auto;
+	top: 20px;
+	right: 40px;
+	bottom: 0;
+	opacity: 1;
+
+	&:before {
+		width: 40px;
+		height: 5px;
+		background: #353541;
+		content: '';
+		position: absolute;
+		top: 10px;
+	}
+
+	&:after {
+		width: 22px;
+		height: 5px;
+		background: #353541;
+		content: '';
+		position: absolute;
+		top: 20px;
+		left: 9px;
+	}
+
+	&.hide {
+		opacity: 0;
+	}
+
+	transition: opacity .2s ease-out;
+}
+
+/// END header
+
+#fullpage {
+	position: relative;
+	top: 0;
+
+	.section {
+		width: 100%;
+		position: relative;
+	}
+}
+
+/// END fullpage

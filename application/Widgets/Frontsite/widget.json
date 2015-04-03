@@ -1,0 +1,20 @@
+{
+	"author": "Andy",
+	"date": "Fri Apr  3 11:16:46 2015",
+	"version": "1.0",
+	"name": "Frontsite",
+	"doc":"frontsite",
+	"js": {
+		"files": [
+			"pinet_spy",
+			"frontsite"
+		]
+	},
+	"scss": {
+		"files": [
+			"frontsite_mixin",
+			"frontsite_layout",
+			"frontsite"
+		]
+	}
+}

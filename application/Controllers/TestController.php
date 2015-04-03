@@ -270,8 +270,7 @@ TEXT;
 	}
 
 	/**
-	 * @Clips\Widget({"html", "grid"})
-	 * @Clips\Scss({"fullpage"})
+	 * @Clips\Widget({"html", "grid", "frontsite"})
 	 */
 	public function fullpage() {
 		\Clips\context('resolutions', array('320', '480', '640', '720' => 'pad', '1280' => 'pc', '1440', '1920', '2880'));

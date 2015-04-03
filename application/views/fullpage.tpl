@@ -16,7 +16,6 @@
 						<li scroll-for="info">Best Movies</li>
 						<li scroll-for="member">Archive</li>
 						<li scroll-for="contact">About</li>
-						<li class="scrolling"></li>
 					</ul>
 					<div id="pullmenu-icon"></div>					
 				</div>
