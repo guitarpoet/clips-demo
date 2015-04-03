@@ -9,6 +9,8 @@
 	
 	var $window = $(window);
 	var sectionsel = [];
+
+	var $fullpage = null;
 	var scrollHandler = null;
 	
 	function Plugin( element, options ) {
@@ -21,7 +23,7 @@
 		this._defaults = defaults;
 		this._name = pluginName;
 
-		var $fullpage = $(_this.options.containerSel);
+		$fullpage = $(_this.options.containerSel);
 		var $menubar = $(_this.element);
 		var $menu = $menubar.find(_this.options.menuSel);
 		
