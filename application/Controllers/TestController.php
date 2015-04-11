@@ -291,5 +291,15 @@ TEXT;
 		
 		return $this->render('fullpage');
 	}
+
+	/**
+	 * @Clips\Widget({"html", "Image", "jdatagrid", "jqwall"})
+	 * @Clips\Scss({"jqwall"})
+	 */
+	public function jqwall() {
+		return $this->render("jqwall", array(
+			'items' => range(1, 10)
+		));	
+	}
 	
 }

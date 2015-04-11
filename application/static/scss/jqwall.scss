@@ -1,0 +1,15 @@
+.jqwall {
+	width: 100%;
+	.brick {
+		width: 20%;
+		float: left;
+		.info {
+			display: none;
+		}
+	}
+	
+	.brick:first-child {
+		width: 40%;
+	}
+}
+

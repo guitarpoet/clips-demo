@@ -1,0 +1,13 @@
+{
+	"author": "Andy",
+	"date": "Fri Apr 10 14:00:13 2015",
+	"version": "1.0",
+	"name": "Jqwall",
+	"doc":"jqwall",
+	"depends": ["Jquery", "StringJs"],
+	"js": {
+		"files": [
+			"jquery.freetile"
+		]
+	}
+}

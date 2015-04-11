@@ -8,16 +8,16 @@ class Widget extends \Clips\Widget {
 	//====================================
 	// Initializing YiZhiFu
 	//====================================
-	$('.listview.clips-listview').on('list.loaded', function(e, list, opt){
-		if($.isFunction($.fn.picture)) {
-			$('figure,picture').picture();
-		}
-	});
-	$('.listview.clips-listview').on('list.resize', function(){
-		if($.isFunction($.fn.picture)) {
-			$('figure,picture').picture();
-		}
-	});		
+//	$('.listview.clips-listview').on('list.loaded', function(e, list, opt){
+//		if($.isFunction($.fn.picture)) {
+//			$('figure,picture').picture();
+//		}
+//	});
+//	$('.listview.clips-listview').on('list.resize', function(){
+//		if($.isFunction($.fn.picture)) {
+//			$('figure,picture').picture();
+//		}
+//	});		
 //	$('.listview.clips-listview').on('list.init', function(){
 //		var listviewApi = $(this).data('api');
 //		listviewApi.clear();
