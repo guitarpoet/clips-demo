@@ -230,27 +230,32 @@
 					var responsiveImgLength = list.find('li').find('.responsive > img').length - list.find('li.listview_item_template').find('.responsive > img').length;
 					var loadImageLength = 0;
 
-					if(responsiveImgLength > 0) {
-						list.find('.responsive > img').responsiveImage({
-							delay: 1000,
-							onload:function(){
-								loadImageLength++;
-							},
-							onerror: function() {
-								loadImageLength++;
-							},
-							oncomplete: function() {
-								if(loadImageLength > responsiveImgLength - 1) {
-									loadend();
-								}
-							}
-						});
-					}
-					else {
+					list.find('.responsive > img').responsiveImage();
+
+					timeout = setTimeout(function(){
 						loadend();
-					}
+					}, 3000);
+
+					//if(responsiveImgLength > 0) {
+					//	list.find('.responsive > img').responsiveImage({
+					//		delay: 1000,
+					//		onload:function(){
+					//			loadImageLength++;
+					//		},
+					//		onerror: function() {
+					//			loadImageLength++;
+					//		},
+					//		oncomplete: function() {
+					//			if(loadImageLength > responsiveImgLength - 1) {
+					//				loadend();
+					//			}
+					//		}
+					//	});
+					//}
+					//else {
+					//	loadend();
+					//}
 					function loadend() {
-						loadImageLength = 0;
 						layoutItems(list); // Layout the list first
 						saveState(list, listview_option);
 						self.trigger('list.loaded', [list, data]);
@@ -701,7 +706,6 @@
 				objs[index].search = value;
 			}
 
-			this.list.refresh = true;
 			requestData(this.list);
 
 			// Change the value back to empty
@@ -749,7 +753,7 @@
 				}
 				else {
 					if(list.states.columns[columnindex] && list.states.columns[columnindex].search) {
-						list.states.column[columnindex] == null;
+						list.states.columns[columnindex] == null;
 					}
 				}
 			}
@@ -785,7 +789,7 @@
 			createToolbar(list);
 
 			if($.isFunction($.fn.selectable)) {
-				setSelectablePlugin(list); // Initilize the selectable function for listview	
+				setSelectablePlugin(list); // Initilize the selectable function for listview
 			}
 
 			self.data('api', new Api(list));
