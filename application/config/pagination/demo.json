@@ -6,5 +6,6 @@
 		{ "data": "groups.name", "title" : "Group", "refer":"groups.id", "action":"group/show"}
 	],
 	"join": ["groups", {"users.group_id": "groups.id"}],
-	"listtype": "static"
+	"listtype": "static",
+    "clearSearch": true
 }

@@ -73,16 +73,23 @@ class TestController extends Controller {
 
 		\Clips\context('current_bundle', 'zh-CN');
 		
+		// 请把listview widget下listview.js 使用 yizhifu listview.js 替换掉
+		// 测试稳定后 再更新
+		
 		$js = <<<TEXT
 	var layer = $('ul.layer');
+	var api = $('#list').data('api');
 	var ds = new Clips.AjaxDataSource();
+	
+	$("#list").on('list.init', function(e, list){
+		api.clearSearch(list, 1);
+	});		
 
 	layer.each(function(){
 		new Clips.Layer(ds, this);
 	});
 
 	layer.on('click', 'li.active',  function(){
-		var api = $('#user').data('api');
 		api.columnSearch(1, "Jack");
 	});
 

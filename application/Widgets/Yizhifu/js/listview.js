@@ -132,6 +132,14 @@
 			}
 
 			list.refresh = false;
+
+			if(settings.clearSearch) {
+				$.each(list.states.columns, function(i){
+					if(list.states.columns[i].search) {
+						list.states.columns[i].search = null;
+					}
+				});
+			}
 		}
 
 		function getState(list) {
@@ -149,6 +157,8 @@
 		function requestData(list) {
 			if(settings.ajax != '') {
 				showMask(list);
+
+				console.log('request');
 
 				// data, name, orderable, regex, searchable, value
 				if(list.draw) {
@@ -727,6 +737,31 @@
 			}
 		};
 
+		Api.prototype.clearSearch = function(list, columnindex) {
+			var _this = this;
+			if(columnindex || columnindex == 0) {
+				if($.isArray(columnindex)) {
+					$.each(columnindex, function(i){
+						var colindex = columnindex[i];
+						if(list.states.columns[colindex] && list.states.columns[colindex].search) {
+							list.states.column[colindex] == null;
+						}
+					});
+				}
+				else {
+					if(list.states.columns[columnindex] && list.states.columns[columnindex].search) {
+						list.states.column[columnindex] == null;
+					}
+				}
+			}
+
+			$.each(list.states.columns, function(i){
+				if(list.states.columns[i] && list.states.columns[i].search) {
+					list.states.columns[i].search = null;
+				}
+			});
+		};
+
 		Api.prototype.layout = function(list) {
 			layoutItems(list);
 		};
@@ -744,12 +779,10 @@
 			var list = $(this);
 			restoreSavedStates(list); // Restore the states at first
 			restoreSettings(list);
+
 			list.wrap(settings.wrap); // Added the list wrap
-
 			createMask(list);
-
 			requestData(list);	// Requesting the data for the listview
-
 			createToolbar(list);
 
 			if($.isFunction($.fn.selectable)) {
