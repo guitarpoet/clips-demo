@@ -158,8 +158,6 @@
 			if(settings.ajax != '') {
 				showMask(list);
 
-				console.log('request');
-
 				// data, name, orderable, regex, searchable, value
 				if(list.draw) {
 					list.draw++;
