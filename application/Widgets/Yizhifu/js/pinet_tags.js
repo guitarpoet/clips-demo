@@ -72,7 +72,7 @@
 		},
 		clearItems: function(callback) {
 			$("li", this.node).remove()
-				.promise().done(callback);
+					.promise().done(callback);
 		},
 		showItems: function(items) {
 			var template = $('script[type="text/x-handlebars-template"]', this.node);
@@ -86,9 +86,15 @@
 
 				//$(self.node).append(self.createItem(template, {name: 'All', path: path}));
 
-				$(items).each(function(i, data) {
-					$(self.node).append(self.createItem(template, data));
-				})
+				var callback = function(data) {
+					return function(item){
+						$(self.node).append(self.createItem(template, item));
+					}(data);
+				};
+
+				$.each(items.layer, function(i){
+					callback(items.layer[i]);
+				});
 			}
 		},
 		getParentLayer: function() {
