@@ -252,6 +252,7 @@
 						loadend();
 					}
 					function loadend() {
+						loadImageLength = 0;
 						layoutItems(list); // Layout the list first
 						saveState(list, listview_option);
 						self.trigger('list.loaded', [list, data]);
