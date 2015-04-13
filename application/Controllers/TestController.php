@@ -67,24 +67,28 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Widgets\ListView("demo")
-	 * @Clips\Widget({"grid", "image", "lang"})
+	 * @Clips\Widget({"grid", "image", "lang", "yizhifu"})
 	 */
 	public function listview() {
 
 		\Clips\context('current_bundle', 'zh-CN');
 		
 		$js = <<<TEXT
-			$('.listview.clips-listview').on('list.beforeDraw', function(e, list, data){
-				$.each(data.data, function(i, item){
-//					handle data
-				});
-			});		
-		
-//			$('.listview.clips-listview').on('list.loaded', function(e, list, data){
-//				// get all listview item
-//				var items = list.children('.listview_item').not('.listview_item_template');
-//				console.log(items);
-//			});
+	var layer = $('ul.layer');
+	var ds = new Clips.AjaxDataSource();
+
+	layer.each(function(){
+		new Clips.Layer(ds, this);
+	});
+
+	layer.on('click', 'li.active',  function(){
+		var api = $('#user').data('api');
+		api.columnSearch(1, "Jack");
+	});
+
+	layer.on('list.tags.always-active', function(){
+		console.log('always-active');
+	});		
 TEXT;
 		
 		\Clips\clips_context('jquery_init', $js, true);
@@ -92,6 +96,94 @@ TEXT;
 		return $this->render('listview');
 	}
 
+	public function listview_ajax() {
+		$json = <<<TEXT
+[
+		{
+			"id": 1,
+			"name": "A",
+			"layer": 1,
+			"path": "/[1]"
+		},
+		{
+			"id": 2,
+			"name": "B",
+			"layer": 1,
+			"path": "/[2]"
+		},
+		{
+			"id": 3,
+			"name": "A1",
+			"layer": 2,
+			"path": "/[1]/[3]"
+		},
+		{
+			"id": 4,
+			"name": "A2",
+			"layer": 2,
+			"path": "/[1]/[4]"
+		},
+		{
+			"id": 5,
+			"name": "A11",
+			"layer": 3,
+			"path": "/[1]/[3]/[5]"
+		},
+		{
+			"id": 6,
+			"name": "A12",
+			"layer": 3,
+			"path": "/[1]/[3]/[6]"
+		},
+		{
+			"id": 7,
+			"name": "A21",
+			"layer": 3,
+			"path": "/[1]/[4]/[7]"
+		},
+		{
+			"id": 8,
+			"name": "A22",
+			"layer": 3,
+			"path": "/[1]/[4]/[8]"
+		},
+		{
+			"id": 9,
+			"name": "A111",
+			"layer": 4,
+			"path": "/[1]/[3]/[5]/[9]"
+		},
+		{
+			"id": 10,
+			"name": "A112",
+			"layer": 4,
+			"path": "/[1]/[3]/[5]/[10]"
+		}
+	]
+TEXT;
+		$path = $this->request->param('path');
+		$level = $this->request->param('level', null);
+		$json = \Clips\parse_json($json);
+
+		$ret = array();
+
+		if($level !== null) {
+			foreach($json as $item) {
+				if($item->layer == $level) {
+					if($path) {
+						if(strpos($item->path, $path) !== 0)
+							continue;
+					}
+					$ret []= $item;
+				}
+			}
+		}
+		else {
+			$ret = $json;
+		}
+		return $this->json($ret);		
+	}
+	
 	public function redi() {
 		return $this->redirect(\Clips\site_url('test'));
 	}
@@ -293,7 +385,7 @@ TEXT;
 	}
 
 	/**
-	 * @Clips\Widget({"html", "Image", "jdatagrid", "jqwall"})
+	 * @Clips\Widget({"html", "Image", "jdatagrid"})
 	 * @Clips\Scss({"jqwall"})
 	 */
 	public function jqwall() {
@@ -302,4 +394,71 @@ TEXT;
 		));	
 	}
 	
+	
+	public function ld() {
+		$data = [
+			[
+				"id"=>1,
+				"name"=>"A",
+				"layer"=>1,
+				"path"=>"/[1]"
+			],
+			[
+				"id"=>2,
+				"name"=>"B",
+				"layer"=>1,
+				"path"=>"/[2]"
+			],
+			[
+				"id"=>3,
+				"name"=>"A1",
+				"layer"=>2,
+				"path"=>"/[1]/[3]"
+			],
+			[
+				"id"=>4,
+				"name"=>"A2",
+				"layer"=>2,
+				"path"=>"/[1]/[4]"
+			],
+			[
+				"id"=>5,
+				"name"=>"A11",
+				"layer"=>3,
+				"path"=>"/[1]/[3]/[5]"
+			],
+			[
+				"id"=>6,
+				"name"=>"A12",
+				"layer"=>3,
+				"path"=>"/[1]/[3]/[6]"
+			],
+			[
+				"id"=>7,
+				"name"=>"A21",
+				"layer"=>3,
+				"path"=>"/[1]/[4]/[7]"
+			],
+			[
+				"id"=>8,
+				"name"=>"A22",
+				"layer"=>3,
+				"path"=>"/[1]/[4]/[8]"
+			],
+			[
+				"id"=>9,
+				"name"=>"A111",
+				"layer"=>4,
+				"path"=>"/[1]/[3]/[5]/[9]"
+			],
+			[
+				"id"=>10,
+				"name"=>"A112",
+				"layer"=>4,
+				"path"=>"/[1]/[3]/[5]/[10]"
+			]			
+		];
+		
+		echo json_encode($data);
+	}
 }

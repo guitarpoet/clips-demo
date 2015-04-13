@@ -4,6 +4,12 @@
 	"version": "1.0",
 	"name": "Yizhifu",
 	"doc":"yizhifu",
+	"depends": ["StringJs"],
+	"js": {
+		"files": [
+			"pinet_tags"
+		]	
+	},
     "scss": {
         "files": [
             "yizhifu_base",

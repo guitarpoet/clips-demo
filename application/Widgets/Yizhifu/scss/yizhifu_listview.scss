@@ -105,4 +105,25 @@
 			}
 		}
 	}
+	echo: 1;
+}
+
+.listview_wrapper {
+	position: relative;
+}
+
+.listview.no-result {
+	overflow: visible;
+}
+
+.listview-no-result {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 40px;
+	left: 0;
+	top: 0;
+	text-align: center;
+	margin: 0;
+	padding: 0;
 }

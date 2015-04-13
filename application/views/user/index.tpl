@@ -26,6 +26,21 @@
 			{*{/field}*}
 			{*{field datatable-for="user" action="search" field="username"}{/field}*}
 		{*{/form}*}
+		{ul class="layer" data-level="1"}
+			{template}
+				{li data-id="_(path)"}{a}_(name){/a}{/li}
+			{/template}
+		{/ul}
+		{ul class="layer" data-level="2"}
+			{template}
+				{li data-id="_(path)"}{a}_(name){/a}{/li}
+			{/template}
+		{/ul}
+		{ul class="layer" data-level="3"}
+			{template}
+				{li data-id="_(path)"}{a}_(name){/a}{/li}
+			{/template}
+		{/ul}		
 	{/block}
 	{block name="workbench"}
 		{datatable name="user"}

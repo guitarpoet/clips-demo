@@ -16,6 +16,9 @@ class UserController extends Controller {
 
 	/**
 	 * @Clips\Widgets\DataTable("user")
+	 * @Clips\Widget({"yizhifu"})
+	 * @Clips\Js({"application/static/js/listview.js"})
+	 * @Clips\Scss({"list"})
 	 * @Clips\Actions("user")
 	 */
 	public function index() {
