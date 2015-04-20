@@ -92,9 +92,11 @@
 					}(data);
 				};
 
-				$.each(items.layer, function(i){
-					callback(items.layer[i]);
-				});
+				if(items.layer) {
+					$.each(items.layer, function(i){
+						callback(items.layer[i]);
+					});					
+				}
 			}
 		},
 		getParentLayer: function() {

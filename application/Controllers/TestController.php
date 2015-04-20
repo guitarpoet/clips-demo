@@ -468,4 +468,27 @@ TEXT;
 		
 		echo json_encode($data);
 	}
+	
+	public function nl() {
+		$data = [
+			[
+				"itemId" => 1,
+		        "img" => 'dist/img/list1.jpg',
+		        "name" => 'Meet and greet with Bill Murray',
+		        "desc" => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+		        "price" => 19.95,
+		        "number" => 1
+		    ],
+			[
+				"itemId" => 2,
+		        "img" => 'dist/img/list2.jpeg',
+		        "name" => 'Meet and greet with Bill Murray',
+		        "desc" => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+		        "price" => 19.95,
+		        "number" => 1
+		    ]
+		];
+		
+		echo json_encode($data);
+	}
 }
