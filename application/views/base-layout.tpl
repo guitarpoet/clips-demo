@@ -42,6 +42,7 @@
 				});				
 				
 			});
-		</script>		
+		</script>
+		{block name='script'}{/block}
 	{/body}
 {/html}

@@ -491,4 +491,19 @@ TEXT;
 		
 		echo json_encode($data);
 	}
+
+	/**
+	 * @Clips\Widget({"slider"})
+	 */
+	public function sl() {
+		$data = array(
+			'items' => array(
+				(object) array('url'=>'application/static/img/deli/home/home-slider-slide-1.jpg'),
+				(object) array('url'=>'application/static/img/deli/home/home-slider-slide-2.jpg'),
+				(object) array('url'=>'application/static/img/deli/home/home-slider-slide-3.jpg')
+			)
+		);
+		
+		return $this->render('slider', $data);
+	}
 }

@@ -1,0 +1,21 @@
+@mixin slider($width, $height) {
+	position: relative; 
+	top: 0; 
+	left: 0; 
+	width: $width; 
+	height: $height;
+	
+	& [u="slides"] {
+		cursor: move; 
+		position: absolute; 
+		overflow: hidden; 
+		left: 0; 
+		top: 0; 
+		width: $width; 
+		height: $height;
+	}
+}
+
+.pinet-full-slider {
+	@include slider(100%, 300px);
+}
