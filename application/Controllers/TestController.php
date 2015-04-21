@@ -506,4 +506,11 @@ TEXT;
 		
 		return $this->render('slider', $data);
 	}
+
+	/**
+	 * @Clips\Widget({"productlist"})
+	 */
+	public function ct() {
+		return $this->render('cart');
+	}
 }

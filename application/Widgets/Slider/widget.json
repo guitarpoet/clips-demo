@@ -6,7 +6,8 @@
 	"doc":"Slider widget",
 	"js": {
 		"files": [
-			"jssor.slider.mini"
+			"jssor",
+			"jssor.slider"
 		]
 	},
 	"scss": {

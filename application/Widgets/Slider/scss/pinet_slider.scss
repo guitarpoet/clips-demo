@@ -1,4 +1,6 @@
-
+body {
+	margin: 0;
+}
 
 @mixin slider($width, $height) {
 	position: relative; 
@@ -32,7 +34,7 @@
 }
 
 .pinet-full-slider {
-	@include slider(600px, 300px);
+	@include slider(1920px, 300px);
 }
 
 .pinet-full-slider [u="navigator"] {

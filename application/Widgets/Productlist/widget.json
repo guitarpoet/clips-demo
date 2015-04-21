@@ -1,0 +1,22 @@
+{
+	"author": "Andy (andy.pinet@pinet.co)",
+	"date": "Thu Feb  5 14:44:00 2015",
+	"version": "1.0",
+	"name": "demo.productlist",
+	"doc":"Productlist widget",
+	"depends": ["Jquery"],
+	"js": {
+		"files": [
+			"handlebars",
+			"es6-map-shim",
+			"promise",
+			"jquery.spinner",
+			"productlist"
+		]
+	},
+	"scss": {
+		"files": [
+			"productlist"
+		]
+	}
+}
