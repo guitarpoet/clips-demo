@@ -1,0 +1,12 @@
+{
+	"author": "andy",
+	"date": "Mon May 11 11:30:42 2015",
+	"version": "1.0",
+	"name": "Spinner",
+	"doc":"spinner",
+	"js": {
+		"files": [
+			"jquery.spinner"
+		]
+	}
+}

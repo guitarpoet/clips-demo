@@ -513,4 +513,19 @@ TEXT;
 	public function ct() {
 		return $this->render('cart');
 	}
+
+	/**
+	 * @Clips\Widget({"stickup"})
+	 * @Clips\Scss({"spy"})
+	 */
+	public function sp() {
+		return $this->render('stickup');
+	}
+
+	/**
+	 * @Clips\Widget({"spinner"})
+	 */
+	public function si() {
+		return $this->render('spinner');	
+	}
 }

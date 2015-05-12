@@ -1,0 +1,16 @@
+{
+	"author": "andy",
+	"date": "Mon Apr 27 09:51:06 2015",
+	"version": "1.0",
+	"name": "Stickup",
+	"doc":"stickup",
+	"js": {
+		"files": [
+			"jquery.scrollstop.min",
+			"jquery-watch.min",
+			"pinet_spy",
+			"pinet_stickup",
+			"pinet_spycomponent"
+		]
+	}
+}
