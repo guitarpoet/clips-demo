@@ -59,7 +59,8 @@ class TestController extends Controller {
 
 	/**
 	 * @Clips\Widgets\DataTable("demo")
-     * @Clips\Widget({"grid", "SelectBoxIt"})
+     * @Clips\Widget({"grid", "SelectBoxIt", "keypress"})
+	 * @Clips\Js({"application/static/js/datatable-keypress.js"})
 	 */
 	public function datatable() {
 		return $this->render('datatable');
@@ -527,5 +528,15 @@ TEXT;
 	 */
 	public function si() {
 		return $this->render('spinner');	
+	}
+
+	/**
+	 * @Clips\Form("select")
+	 * @Clips\Widget({"grid"})
+	 * @Clips\Js({"application/static/js/select.js"})
+	 */
+	public function select() {
+		$this->formData('select', array('province' => 'Jiangsu', 'city' => 'Nanjing', 'district' => 'Gulou'));
+		return $this->render('select');		
 	}
 }

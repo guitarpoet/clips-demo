@@ -162,4 +162,13 @@ class WidgetController extends Controller {
 		return $this->render("bootstrap-layout", array('actions' => $actions));
 	}
 
+	/**
+	 * @Clips\Widget({"swiper"})
+	 * @Clips\Scss({"swiper"})
+	 * @Clips\Js({"application/static/js/swiper.js"})
+	 */
+	public function sp() {
+		return $this->render('tests/swiper');
+	}
+	
 }

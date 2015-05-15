@@ -1,0 +1,19 @@
+{
+	"author": "andy",
+	"date": "Fri May 15 11:36:21 2015",
+	"version": "1.0",
+	"name": "Swiper",
+	"doc":"swiper",
+	"depends": ["jquery"],
+	"css": {
+		"files": [
+			"swiper"
+		]
+	},
+	"js": {
+		"files": [
+			"swiper",
+			"swiper.jquery"
+		]	
+	}
+}

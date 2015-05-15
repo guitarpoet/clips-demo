@@ -1,0 +1,18 @@
+[
+	{
+		"field": "province",
+		"label": "Province"
+	},
+	{
+		"field": "city",
+		"label": "City",
+		"cascade_field": "province",
+		"cascade_model": "place"
+	},
+	{
+		"field": "district",
+		"label": "District",
+		"cascade_field": "city",
+		"cascade_model": "place"
+	}
+]

@@ -1,0 +1,12 @@
+{
+	"author": "andy",
+	"date": "Wed May 13 16:01:39 2015",
+	"version": "1.0",
+	"name": "Keypress",
+	"doc":"keypress",
+	"js": {
+		"files": [
+			"keypress"
+		]
+	}
+}
