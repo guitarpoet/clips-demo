@@ -11,7 +11,7 @@ class PlaceModel extends DBModel {
 			case "Jiangsu":
 				return array("Suzhou", "Nanjing");
 		}
-		return array("Hefei", "Huangshan");
+		return false;
 	}
 
 	public function listDistrict($city) {
@@ -21,6 +21,6 @@ class PlaceModel extends DBModel {
 			case "Nanjing":
 				return array("Gulou", "POI!!!");
 		}
-		return array('hihi');
+		return false;
 	}
 }

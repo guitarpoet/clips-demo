@@ -536,7 +536,18 @@ TEXT;
 	 * @Clips\Js({"application/static/js/select.js"})
 	 */
 	public function select() {
-		$this->formData('select', array('province' => 'Jiangsu', 'city' => 'Nanjing', 'district' => 'Gulou'));
-		return $this->render('select');		
+		$this->formData('select');
+		return $this->render('select', array(
+			'options'=>array(
+				array(
+					'label'=>'Jiangsu',
+					'value'=>'Jiangsu'
+				),
+				array(
+					'label'=>'Anhui',
+					'value'=>'Anhui'
+				)				
+			)
+		));		
 	}
 }

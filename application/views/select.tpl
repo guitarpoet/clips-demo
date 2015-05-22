@@ -2,9 +2,7 @@
 							{block name="workbench"}
 								{form name="select"}
 									{field field="province"}
-										{select}
-											{option}Jiangsu{/option}
-											{option}Anhui{/option}
+										{select options=$options}
 										{/select}
 									{/field}
 									{field field="city"}

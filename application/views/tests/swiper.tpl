@@ -1,6 +1,7 @@
 {extends file="bootstrap-layout.tpl"}
 	{block name="main"}
 		<section id="simple">
+			<h3>simple</h3>
 			<!-- Swiper -->
 			<div class="swiper-container">
 				<div class="swiper-wrapper">
@@ -19,6 +20,7 @@
 		</section>
 
 		<section id="responsive">
+			<h3>responsive</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -40,6 +42,7 @@
 
 
 		<section id="vertical">
+			<h3>vertical</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -60,6 +63,7 @@
 		</section>
 
 		<section id="spacebetween">
+			<h3>space between</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -80,6 +84,7 @@
 		</section>
 
 		<section id="slidesperview">
+			<h3>slides preview</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -100,6 +105,7 @@
 		</section>	
 
 		<section id="slidesperviewauto">
+			<h3>slides preview auto</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -120,6 +126,7 @@
 		</section>	
 
 		<section id="centered">
+			<h3>centered</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -140,6 +147,7 @@
 		</section>	
 
 		<section id="centeredauto">
+			<h3>centeredauto</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -160,6 +168,7 @@
 		</section>
 
 		<section id="freemode">
+			<h3>free mode</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -180,6 +189,7 @@
 		</section>
 
 		<section id="slidespercolumn">
+			<h3>slides per column</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -200,6 +210,7 @@
 		</section>
 
 		<section id="nested">
+			<h3>nested</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container swiper-container-h">
 		        <div class="swiper-wrapper">
@@ -225,6 +236,7 @@
 		</section>		
 
 		<section id="grapcursor">
+			<h3>grap cursor</h3>
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
 		            <div class="swiper-slide">Slide 1</div>
@@ -244,6 +256,7 @@
 		</section>
 
 		<section id="scrollbar">
+			<h3>scrollbar</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -264,6 +277,7 @@
 		</section>
 
 		<section id="navarrows">
+			<h3>navarrows</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -287,6 +301,7 @@
 		</section>
 
 		<section id="infiniteloop">
+			<h3>infiniteloop</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -310,6 +325,7 @@
 		</section>
 
 		<section id="effectfade">
+			<h3>effect fade</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -328,6 +344,7 @@
 		</section>
 
 		<section id="effectcube">
+			<h3>effect cube</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -343,6 +360,7 @@
 		</section>
 
 		<section id="effectcoverflow">
+			<h3>effect coverflow</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -363,6 +381,7 @@
 		</section>
 
 		<section id="keyboardcontrol">
+			<h3>keyboard control</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -386,6 +405,7 @@
 		</section>
 
 		<section id="mousewheelcontrol">
+			<h3>mousewheel control</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -406,6 +426,7 @@
 		</section>
 
 		<section id="autoplay">
+			<h3>autoplay</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -429,6 +450,7 @@
 		</section>
 
 		<section id="dynamicslides">
+			<h3>dynamic slides</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -452,6 +474,7 @@
 		</section>
 
 		<section id="thumbsgallery">
+			<h3>thumbs gallery</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container gallery-top">
 		        <div class="swiper-wrapper">
@@ -487,6 +510,7 @@
 		</section>
 
 		<section id="multipleswipers">
+			<h3>multiple swipers</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container swiper1">
 		        <div class="swiper-wrapper">
@@ -543,6 +567,7 @@
 		</section>
 
 		<section id="hashnavigation">
+			<h3>hashnavigation</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -566,6 +591,7 @@
 		</section>
 
 		<section id="rtl">
+			<h3>rtl</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container" dir="rtl">
 		        <div class="swiper-wrapper">
@@ -589,6 +615,7 @@
 		</section>	
 
 		<section id="jqhans">
+			<h3>jqhans</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -612,6 +639,7 @@
 		</section>
 
 		<secetion id="parallax">
+			<h3>parallax</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="parallax-bg" style="background-image:url(http://lorempixel.com/900/600/nightlife/2/)" data-swiper-parallax="-23%"></div>
@@ -647,6 +675,7 @@
 		</secetion>
 
 		<section id="custompagination">
+			<h3>custompagination</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -667,6 +696,7 @@
 		</section>
 
 		<section id="lazyloadimages">
+			<h3>lazyloadimages</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -707,6 +737,7 @@
 		</section>
 
 		<section id="customplugin">
+			<h3>custom plugin</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
@@ -730,6 +761,7 @@
 		</section>
 
 		<section id="scrollcontainer">
+			<h3>scroll container</h3>
 		    <!-- Swiper -->
 		    <div class="swiper-container">
 		        <div class="swiper-wrapper">
