@@ -536,7 +536,7 @@ TEXT;
 	 * @Clips\Js({"application/static/js/select.js"})
 	 */
 	public function select() {
-		$this->formData('select');
+		$this->formData('select', array('province' => 'Jiangsu', 'city' => 'Nanjing', 'district' => 'Gulou'));
 		return $this->render('select', array(
 			'options'=>array(
 				array(
